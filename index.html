@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEIGHBORS HOTEL</title>
+  <meta name="description" content="NEIGHBORS HOTEL — 東京の各エリアに展開するアパートメントホテルブランド。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:     #f5efe6;
+      --text:   #3a2510;
+      --accent: #865b39;
+      --en:     'Libre Baskerville', Georgia, serif;
+      --ja:     'Noto Serif JP', 'Yu Mincho', serif;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--ja);
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+      text-align: center;
+    }
+    .brand-name {
+      font-family: var(--en);
+      font-size: clamp(22px, 4vw, 36px);
+      letter-spacing: .25em;
+      font-weight: 400;
+      text-transform: uppercase;
+      margin-bottom: clamp(12px, 2vh, 20px);
+    }
+    .brand-tagline {
+      font-family: var(--ja);
+      font-size: clamp(12px, 1.4vw, 15px);
+      letter-spacing: .08em;
+      opacity: .65;
+      margin-bottom: clamp(48px, 8vh, 80px);
+    }
+    .property-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: clamp(16px, 2.5vh, 24px);
+      width: 100%;
+      max-width: 360px;
+    }
+    .property-link {
+      display: block;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      text-decoration: none;
+      font-family: var(--en);
+      font-size: clamp(12px, 1.2vw, 14px);
+      letter-spacing: .25em;
+      text-transform: uppercase;
+      padding: clamp(16px, 2.2vh, 22px) 20px;
+      transition: background .3s, color .3s;
+    }
+    .property-link:hover {
+      background: var(--accent);
+      color: var(--bg);
+    }
+    .property-link__sub {
+      display: block;
+      font-family: var(--ja);
+      font-size: clamp(10px, 1vw, 12px);
+      letter-spacing: .1em;
+      opacity: .7;
+      margin-top: 6px;
+      text-transform: none;
+    }
+    footer {
+      margin-top: clamp(48px, 8vh, 80px);
+      font-family: var(--en);
+      font-size: 11px;
+      letter-spacing: .1em;
+      opacity: .4;
+    }
+  </style>
+</head>
+<body>
+  <p class="brand-name">Neighbors Hotel</p>
+  <p class="brand-tagline">そこに住んだことがある旅へ。</p>
+
+  <ul class="property-list">
+    <li>
+      <a class="property-link" href="/ikebukuro-north/ja/">
+        North Ikebukuro
+        <span class="property-link__sub">上池袋</span>
+      </a>
+    </li>
+    <li>
+      <a class="property-link" href="/otsuka/ja/">
+        Otsuka
+        <span class="property-link__sub">大塚</span>
+      </a>
+    </li>
+  </ul>
+
+  <footer>&copy; 2026 NEIGHBORS HOTEL</footer>
+</body>
+</html>
