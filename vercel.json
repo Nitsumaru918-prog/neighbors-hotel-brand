@@ -1,6 +1,6 @@
 {
-  "rewrites": [
-    { "source": "/ikebukuro-north/:path*", "destination": "https://neighbors-hotel-kami-ikebukuro.vercel.app/ikebukuro-north/:path*" },
-    { "source": "/otsuka/:path*", "destination": "https://neighbors-hotel-otsuka-south.vercel.app/otsuka/:path*" }
+  "redirects": [
+    { "source": "/ikebukuro-north/:path*", "destination": "https://neighbors-hotel-kami-ikebukuro.vercel.app/ikebukuro-north/:path*", "permanent": false },
+    { "source": "/otsuka/:path*", "destination": "https://neighbors-hotel-otsuka-south.vercel.app/otsuka/:path*", "permanent": false }
   ]
 }
