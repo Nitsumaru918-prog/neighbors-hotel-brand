@@ -1388,11 +1388,11 @@ ul, ol { list-style: none; }
   text-decoration: none;
 }
 .spot-card__link--official {
-  opacity: .4;
+  color: #555;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
-.spot-card__link--official:hover { opacity: .8; }
+.spot-card__link--official:hover { color: #222; }
 .spot-card__link--map {
   color: var(--accent);
   font-weight: 600;
