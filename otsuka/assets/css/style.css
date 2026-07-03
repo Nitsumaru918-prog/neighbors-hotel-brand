@@ -404,7 +404,7 @@ ul, ol { list-style: none; }
   margin-bottom: 24px;
 }
 .about__body {
-  font-size: clamp(13px,1vw,15px);
+  font-size: clamp(14px,1.1vw,16px);
   line-height: 2.1;
   letter-spacing: .06em;
   opacity: .82;
@@ -550,7 +550,7 @@ ul, ol { list-style: none; }
 }
 .spot__name {
   font-family: var(--ja);
-  font-size: clamp(11px,.9vw,14px);
+  font-size: clamp(14px,1.1vw,16px);
   font-weight: 600;
   letter-spacing: .05em;
   color: var(--text);
@@ -560,7 +560,7 @@ ul, ol { list-style: none; }
 }
 .spot__desc {
   font-family: var(--ja);
-  font-size: clamp(9px,.75vw,11px);
+  font-size: clamp(13px,1vw,15px);
   font-weight: 500;
   letter-spacing: .03em;
   color: var(--text);
@@ -631,7 +631,7 @@ ul, ol { list-style: none; }
 }
 .amenities-list__items {
   font-family: var(--ja);
-  font-size: clamp(13px,1vw,16px);
+  font-size: clamp(14px,1.1vw,16px);
   opacity: .8;
   line-height: 2;
   letter-spacing: .04em;
@@ -668,14 +668,14 @@ ul, ol { list-style: none; }
 .access-row:first-child { border-top: 1px solid rgba(134,91,57,.1); }
 .access-row dt {
   font-family: var(--ja);
-  font-size: clamp(11px,.9vw,13px);
+  font-size: clamp(13px,1vw,15px);
   font-weight: 500;
   opacity: .65;
   letter-spacing: .06em;
   padding-top: 2px;
 }
 .access-row dd {
-  font-size: clamp(11px,.9vw,14px);
+  font-size: clamp(14px,1.1vw,16px);
   opacity: .85;
   line-height: 1.8;
   letter-spacing: .04em;
