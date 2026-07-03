@@ -27,6 +27,8 @@ body {
   overflow-x: hidden;
 }
 
+a { color: inherit; text-decoration: none; }
+
 /* ── サイドバー ──────────────────────────────────────────── */
 .side {
   position: fixed;
@@ -649,37 +651,62 @@ body {
 
 .access__inner {
   display: grid;
-  grid-template-columns: 1fr 1.8fr;
-  gap: clamp(40px,5vw,80px);
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px,4vw,64px);
   align-items: start;
+}
+.access-hotel-name {
+  font-family: var(--en);
+  font-size: clamp(10px,.85vw,13px);
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  opacity: .55;
+  margin-bottom: 24px;
 }
 .access__dl {
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: clamp(16px,2vh,24px) clamp(20px,2.5vw,32px);
+  grid-template-columns: 9em 1fr;
+  gap: 0 clamp(16px,2vw,32px);
+}
+.access__dl dt,
+.access__dl dd {
+  padding: clamp(12px,1.5vh,18px) 0;
+  border-bottom: 1px solid rgba(134,91,57,.1);
+}
+.access__dl dt:first-child,
+.access__dl dt:first-child + dd {
+  border-top: 1px solid rgba(134,91,57,.1);
 }
 .access__dl dt {
-  font-family: var(--en);
-  font-size: clamp(10px,.85vw,13px);
-  letter-spacing: .28em;
+  font-family: var(--ja);
+  font-size: clamp(11px,.9vw,13px);
   font-weight: 500;
-  text-transform: uppercase;
-  opacity: .6;
+  opacity: .65;
+  letter-spacing: .06em;
+  text-transform: none;
+  white-space: normal;
   padding-top: 2px;
-  white-space: nowrap;
 }
 .access__dl dd {
-  font-family: var(--ja);
-  font-size: clamp(13px,1vw,15px);
+  font-size: clamp(11px,.9vw,14px);
+  opacity: .85;
   line-height: 1.8;
-  letter-spacing: .06em;
+  letter-spacing: .04em;
+}
+.access__dl dd a { text-decoration: underline; text-underline-offset: 3px; }
+.access-note-detail {
+  font-size: clamp(10px,.8vw,12px);
+  opacity: .65;
+  display: block;
+  margin-top: 4px;
+  line-height: 1.7;
 }
 .access__map {
   width: 100%;
 }
 .access__map iframe {
   width: 100%;
-  height: 450px;
+  height: 360px;
   border: 0;
   display: block;
 }
