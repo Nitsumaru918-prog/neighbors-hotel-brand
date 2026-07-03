@@ -534,9 +534,7 @@ ul, ol { list-style: none; }
   color: var(--text);
   margin-top: 8px;
   line-height: 1.4;
-  -webkit-text-stroke: 0.6px var(--bg);
-  paint-order: stroke fill;
-  text-shadow: 0 0 6px rgba(245,239,230,.9), 0 0 12px rgba(245,239,230,.6);
+  text-shadow: 0 0 8px rgba(245,239,230,1), 0 0 16px rgba(245,239,230,.8);
 }
 .spot__desc {
   font-family: var(--ja);
@@ -546,9 +544,7 @@ ul, ol { list-style: none; }
   color: var(--text);
   margin-top: 4px;
   line-height: 1.5;
-  -webkit-text-stroke: 0.5px var(--bg);
-  paint-order: stroke fill;
-  text-shadow: 0 0 6px rgba(245,239,230,.9), 0 0 12px rgba(245,239,230,.6);
+  text-shadow: 0 0 8px rgba(245,239,230,1), 0 0 16px rgba(245,239,230,.8);
 }
 /* 各スポット位置（bg_area.pngに対する%指定） */
 .area__spot--spot1 { left: 28%; top: 20%; width: 18%; transition-delay: 0s; }
