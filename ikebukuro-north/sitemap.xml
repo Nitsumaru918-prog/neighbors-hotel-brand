@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- TOP -->
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/</loc>
+    <xhtml:link rel="alternate" hreflang="ja"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/"/>
+    <xhtml:link rel="alternate" hreflang="en"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/</loc>
+    <xhtml:link rel="alternate" hreflang="ja"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/"/>
+    <xhtml:link rel="alternate" hreflang="en"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/</loc>
+    <xhtml:link rel="alternate" hreflang="ja"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/"/>
+    <xhtml:link rel="alternate" hreflang="en"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/</loc>
+    <xhtml:link rel="alternate" hreflang="ja"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/"/>
+    <xhtml:link rel="alternate" hreflang="en"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/</loc>
+    <xhtml:link rel="alternate" hreflang="ja"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/"/>
+    <xhtml:link rel="alternate" hreflang="en"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Rooms: Type 1 -->
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-1/</loc>
+    <xhtml:link rel="alternate" hreflang="ja"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="en"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="ko"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-1/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/rooms/type-1/</loc>
+    <xhtml:link rel="alternate" hreflang="ja"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="en"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="ko"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-1/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/rooms/type-1/</loc>
+    <xhtml:link rel="alternate" hreflang="ja"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="en"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="ko"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-1/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/rooms/type-1/</loc>
+    <xhtml:link rel="alternate" hreflang="ja"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="en"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="ko"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-1/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/rooms/type-1/</loc>
+    <xhtml:link rel="alternate" hreflang="ja"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="en"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="ko"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-1/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Rooms: Type 2 -->
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-2/</loc>
+    <xhtml:link rel="alternate" hreflang="ja"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="en"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="ko"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-2/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/rooms/type-2/</loc>
+    <xhtml:link rel="alternate" hreflang="ja"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="en"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="ko"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-2/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/rooms/type-2/</loc>
+    <xhtml:link rel="alternate" hreflang="ja"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="en"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="ko"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-2/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/rooms/type-2/</loc>
+    <xhtml:link rel="alternate" hreflang="ja"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="en"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="ko"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-2/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/rooms/type-2/</loc>
+    <xhtml:link rel="alternate" hreflang="ja"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="en"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="ko"      href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-2/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
