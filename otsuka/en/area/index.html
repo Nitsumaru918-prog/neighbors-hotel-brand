@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,7 +8,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/otsuka/assets/css/style.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
   <link rel="canonical" href="https://www.neighbors-hotel-tokyo.com/otsuka/en/area/">
   <link rel="alternate" hreflang="ja"      href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/area/">
   <link rel="alternate" hreflang="en"      href="https://www.neighbors-hotel-tokyo.com/otsuka/en/area/">
@@ -202,7 +201,7 @@
 
     <!-- Map -->
     <div class="areapage__map-wrap">
-      <div id="areamap"></div>
+      <iframe id="areamap" src="https://maps.google.com/maps?q=35.7300684,139.7266689&amp;z=14&amp;output=embed&amp;hl=en" style="width:100%;height:100%;border:0;display:block" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
   </div>
@@ -217,84 +216,36 @@
   <p class="site-footer__copy">&copy; 2026 NEIGHBORS HOTEL. All rights reserved.</p>
 </footer>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV/XN/WPgU=" crossorigin=""></script>
 <script src="/otsuka/assets/js/main.js"></script>
 <script>
 (function () {
-  var HOTEL = { lat: 35.7300684, lng: 139.7266689 };
-  var POPUP_MAP_LABEL = 'Open in Google Maps →';
-  var HOTEL_LABEL = 'NEIGHBORS HOTEL TOKYO OTSUKA';
-
-  var map = L.map('areamap', { zoomControl: true }).setView([35.7210, 139.7240], 13);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
-    subdomains: 'abcd', maxZoom: 19
-  }).addTo(map);
-
-  var hotelIcon = L.divIcon({
-    className: '',
-    html: '<div style="width:14px;height:14px;background:#865b39;border:3px solid #f5efe6;border-radius:50%;box-shadow:0 1px 5px rgba(0,0,0,.35)"></div>',
-    iconSize: [14, 14], iconAnchor: [7, 7]
-  });
-  L.marker([HOTEL.lat, HOTEL.lng], { icon: hotelIcon }).addTo(map)
-    .bindPopup('<div style="font-family:Georgia,serif;font-size:12px"><strong>' + HOTEL_LABEL + '</strong><br><span style="opacity:.6">3-38-5 Minamiotsuka, Toshima-ku, Tokyo</span></div>');
-
-  function makeIcon(num) {
-    return L.divIcon({
-      className: '',
-      html: '<div style="width:32px;height:32px;background:#865b39;color:#f5efe6;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-size:12px;font-weight:700;box-shadow:0 2px 8px rgba(58,37,16,.35);border:2px solid rgba(245,239,230,.9);letter-spacing:.05em">' + (num < 10 ? '0' + num : num) + '</div>',
-      iconSize: [32, 32], iconAnchor: [16, 16], popupAnchor: [0, -20]
-    });
-  }
-
-  var markers = {};
+  var HL   = 'hl=en';
+  var BASE = 'https://maps.google.com/maps?q=';
+  var frame = document.getElementById('areamap');
   var cards = document.querySelectorAll('.spot-card');
-
-  cards.forEach(function (card) {
-    var id   = parseInt(card.id.replace('spot-', ''));
-    var lat  = parseFloat(card.dataset.lat);
-    var lng  = parseFloat(card.dataset.lng);
-    var name = card.querySelector('.spot-card__name').textContent;
-    var time = card.querySelector('.spot-card__time').textContent;
-    var mapLink = card.querySelector('.spot-card__link--map');
-    var gmapsHref = mapLink ? mapLink.href : '#';
-
-    var marker = L.marker([lat, lng], { icon: makeIcon(id) }).addTo(map);
-    marker.bindPopup(
-      '<div style="font-family:Georgia,serif;min-width:150px">' +
-      '<strong style="font-size:13px">' + name + '</strong>' +
-      '<div style="font-size:11px;color:#865b39;font-weight:700;margin:4px 0 6px">' + time + '</div>' +
-      '<a href="' + gmapsHref + '" target="_blank" style="font-size:11px;color:#865b39;text-decoration:underline">' + POPUP_MAP_LABEL + '</a>' +
-      '</div>'
-    );
-    markers[id] = { marker: marker, lat: lat, lng: lng };
-
-    card.addEventListener('click', function () {
-      activate(id);
-      map.setView([lat, lng], 15, { animate: true });
-      marker.openPopup();
-    });
-    marker.on('click', function () {
-      activate(id);
-      card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    });
-  });
 
   function activate(id) {
     cards.forEach(function (c) { c.classList.remove('spot-card--active'); });
     var el = document.getElementById('spot-' + id);
     if (el) el.classList.add('spot-card--active');
+    return el;
   }
 
+  cards.forEach(function (card) {
+    card.addEventListener('click', function () {
+      var id = card.id.replace('spot-', '');
+      activate(id);
+      frame.src = BASE + card.dataset.lat + ',' + card.dataset.lng + '&z=16&output=embed&' + HL;
+    });
+  });
+
   var param = parseInt(new URLSearchParams(location.search).get('spot'));
-  if (param && markers[param]) {
-    activate(param);
-    setTimeout(function () {
-      map.setView([markers[param].lat, markers[param].lng], 15, { animate: false });
-      markers[param].marker.openPopup();
-      var el = document.getElementById('spot-' + param);
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }, 200);
+  if (param) {
+    var el = activate(param);
+    if (el) {
+      frame.src = BASE + el.dataset.lat + ',' + el.dataset.lng + '&z=16&output=embed&' + HL;
+      setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }, 300);
+    }
   }
 
   (function () {
