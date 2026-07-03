@@ -1,7 +1,9 @@
 {
   "redirects": [
-    { "source": "/otsuka",          "destination": "/otsuka/ja/",          "permanent": false },
-    { "source": "/ikebukuro-north", "destination": "/ikebukuro-north/ja/", "permanent": false }
+    { "source": "/otsuka",           "destination": "/otsuka/ja/",          "permanent": true },
+    { "source": "/otsuka/",          "destination": "/otsuka/ja/",          "permanent": true },
+    { "source": "/ikebukuro-north",  "destination": "/ikebukuro-north/ja/", "permanent": true },
+    { "source": "/ikebukuro-north/", "destination": "/ikebukuro-north/ja/", "permanent": true }
   ],
   "rewrites": [
     { "source": "/otsuka/ja/rooms/type-a",        "destination": "/otsuka/ja/rooms/type-a/index.html" },
