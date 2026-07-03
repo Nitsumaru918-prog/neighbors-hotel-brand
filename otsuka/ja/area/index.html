@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>周辺スポット案内 — NEIGHBORS HOTEL TOKYO OTSUKA</title>
+  <meta name="description" content="NEIGHBORS HOTEL TOKYO OTSUKA周辺のおすすめスポット。天祖神社、早稲田大学、サンシャインシティ、サンモール大塚台商店街へのアクセス情報。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/otsuka/assets/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="canonical" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/area/">
+  <link rel="alternate" hreflang="ja"      href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/area/">
+  <link rel="alternate" hreflang="en"      href="https://www.neighbors-hotel-tokyo.com/otsuka/en/area/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/area/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/area/">
+  <link rel="alternate" hreflang="ko"      href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/area/">
+  <link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/area/">
+  <link rel="icon" type="image/png" href="/otsuka/assets/favicon/favicon_NH_overlap_512x512.png">
+  <link rel="apple-touch-icon" href="/otsuka/assets/favicon/favicon_NH_overlap_512x512.png">
+</head>
+<body>
+
+<!-- SP Header -->
+<header class="sp-header">
+  <div class="sp-header__logo">
+    <a href="/otsuka/ja/"><img src="/otsuka/assets/images/logo.png" alt="NEIGHBORS HOTEL TOKYO OTSUKA"></a>
+  </div>
+  <button class="sp-burger" id="spBurger" aria-label="menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- SP Drawer -->
+<nav class="sp-drawer" id="spDrawer">
+  <ul class="sp-drawer__nav">
+    <li><a href="/otsuka/ja/#about">About</a></li>
+    <li><a href="/otsuka/ja/#rooms">Rooms</a></li>
+    <li><a href="/otsuka/ja/#area">Area</a></li>
+    <li><a href="/otsuka/ja/#amenities">Amenities</a></li>
+    <li><a href="/otsuka/ja/#access">Access</a></li>
+  </ul>
+  <p class="sp-drawer__lang-label">Language</p>
+  <ul class="sp-drawer__lang">
+    <li><a href="/otsuka/ja/area/">日本語</a></li>
+    <li><a href="/otsuka/en/area/">English</a></li>
+    <li><a href="/otsuka/zh-hans/area/">简体中文</a></li>
+    <li><a href="/otsuka/zh-hant/area/">繁體中文</a></li>
+    <li><a href="/otsuka/ko/area/">한국어</a></li>
+  </ul>
+  <div class="sp-drawer__reserve">
+    <a class="sp-drawer__reserve-btn" href="#" target="_blank">RESERVE</a>
+  </div>
+</nav>
+
+<!-- PC Sidebar -->
+<aside class="side">
+  <div class="side-logo">
+    <a href="/otsuka/ja/"><img src="/otsuka/assets/images/logo.png" alt="NEIGHBORS HOTEL TOKYO OTSUKA"></a>
+  </div>
+  <nav><ul class="side-nav">
+    <li><a href="/otsuka/ja/#about">About</a></li>
+    <li><a href="/otsuka/ja/#rooms">Rooms</a></li>
+    <li><a href="/otsuka/ja/#area" class="active">Area</a></li>
+    <li><a href="/otsuka/ja/#amenities">Amenities</a></li>
+    <li><a href="/otsuka/ja/#access">Access</a></li>
+  </ul></nav>
+  <div class="side-lang">
+    <p class="side-lang__label">Language</p>
+    <ul class="side-lang__list">
+      <li><a href="/otsuka/ja/area/">日本語</a></li>
+      <li><a href="/otsuka/en/area/">English</a></li>
+      <li><a href="/otsuka/zh-hans/area/">简体中文</a></li>
+      <li><a href="/otsuka/zh-hant/area/">繁體中文</a></li>
+      <li><a href="/otsuka/ko/area/">한국어</a></li>
+    </ul>
+  </div>
+  <div class="side-reserve">
+    <a class="side-reserve__btn" href="#" target="_blank">RESERVE</a>
+  </div>
+</aside>
+
+<!-- Area Detail Page -->
+<div class="areapage">
+
+  <div class="areapage__header">
+    <a href="/otsuka/ja/#area" class="areapage__back">← ホテルへ戻る</a>
+    <p class="areapage__eyebrow">Area Guide</p>
+    <h1 class="areapage__heading">周辺スポット案内</h1>
+    <p class="areapage__sub">ホテルから気軽に行けるスポットから、電車でアクセスできる観光地まで。</p>
+  </div>
+
+  <div class="areapage__content">
+
+    <!-- Spot List -->
+    <div class="areapage__list">
+
+      <!-- 01 天祖神社 -->
+      <div class="spot-card" id="spot-1" data-lat="35.7279" data-lng="139.7327">
+        <div class="spot-card__num">01</div>
+        <div class="spot-card__inner">
+          <div class="spot-card__tags">
+            <span class="spot-card__cat">Shrine</span>
+            <span class="spot-card__time">徒歩 2分</span>
+          </div>
+          <h2 class="spot-card__name">天祖神社</h2>
+          <div class="spot-card__route">
+            <div class="route-step route-step--walk">
+              <span class="route-step__mode">徒歩</span>
+              <span class="route-step__time">2分</span>
+            </div>
+          </div>
+          <p class="spot-card__desc">ホテルのすぐそばにある神社。鎌倉時代の末期（1320年代）に建立されたとされ、天照大御神をまつる由緒ある社。9月の神輿祭りでも地域に親しまれている。</p>
+          <div class="spot-card__links">
+            <a href="https://tensojinja.or.jp/" target="_blank" rel="noopener" class="spot-card__link spot-card__link--official">公式サイト</a>
+            <a href="https://maps.google.com/?q=東京都豊島区南大塚3-49-1+天祖神社" target="_blank" rel="noopener" class="spot-card__link spot-card__link--map">Googleマップで開く →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02 早稲田大学 -->
+      <div class="spot-card" id="spot-2" data-lat="35.7089" data-lng="139.7196">
+        <div class="spot-card__num">02</div>
+        <div class="spot-card__inner">
+          <div class="spot-card__tags">
+            <span class="spot-card__cat">University</span>
+            <span class="spot-card__time">約 24分</span>
+          </div>
+          <h2 class="spot-card__name">早稲田大学</h2>
+          <div class="spot-card__route">
+            <div class="route-step route-step--walk">
+              <span class="route-step__mode">徒歩</span>
+              <span class="route-step__time">4分</span>
+              <span class="route-step__note">大塚駅前まで</span>
+            </div>
+            <span class="route-step__arrow">→</span>
+            <div class="route-step route-step--train">
+              <span class="route-step__mode">都電荒川線</span>
+              <span class="route-step__time">約12分</span>
+              <span class="route-step__note">大塚駅前 → 早稲田</span>
+            </div>
+            <span class="route-step__arrow">→</span>
+            <div class="route-step route-step--walk">
+              <span class="route-step__mode">徒歩</span>
+              <span class="route-step__time">8分</span>
+              <span class="route-step__note">早稲田駅から</span>
+            </div>
+          </div>
+          <p class="spot-card__desc">「本当に強い大学ランキング 2026」全国2位。1882年創立、4万人の学生が学ぶ名門校。広大なキャンパスは観光スポットとしても人気が高い。</p>
+          <div class="spot-card__links">
+            <a href="https://www.waseda.jp/top/" target="_blank" rel="noopener" class="spot-card__link spot-card__link--official">公式サイト</a>
+            <a href="https://maps.google.com/?q=東京都新宿区戸塚町1-104+早稲田大学" target="_blank" rel="noopener" class="spot-card__link spot-card__link--map">Googleマップで開く →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 サンシャインシティ -->
+      <div class="spot-card" id="spot-3" data-lat="35.7285" data-lng="139.7182">
+        <div class="spot-card__num">03</div>
+        <div class="spot-card__inner">
+          <div class="spot-card__tags">
+            <span class="spot-card__cat">Complex</span>
+            <span class="spot-card__time">徒歩 13分</span>
+          </div>
+          <h2 class="spot-card__name">池袋 サンシャインシティ</h2>
+          <div class="spot-card__route">
+            <div class="route-step route-step--walk">
+              <span class="route-step__mode">徒歩</span>
+              <span class="route-step__time">13分</span>
+            </div>
+          </div>
+          <p class="spot-card__desc">超高層ビルを中心とした複合商業施設。水族館・展望台・アニメストア・ショッピングセンター・博物館・映画館など、多彩な施設が集結。一日中楽しめる都市型エンタメ空間。</p>
+          <div class="spot-card__links">
+            <a href="https://maps.google.com/?q=東京都豊島区東池袋3-1-2+サンシャインシティ" target="_blank" rel="noopener" class="spot-card__link spot-card__link--map">Googleマップで開く →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 04 サンモール大塚台商店街 -->
+      <div class="spot-card" id="spot-4" data-lat="35.7298" data-lng="139.7331">
+        <div class="spot-card__num">04</div>
+        <div class="spot-card__inner">
+          <div class="spot-card__tags">
+            <span class="spot-card__cat">Shopping Street</span>
+            <span class="spot-card__time">徒歩 2分</span>
+          </div>
+          <h2 class="spot-card__name">サンモール大塚台商店街</h2>
+          <div class="spot-card__route">
+            <div class="route-step route-step--walk">
+              <span class="route-step__mode">徒歩</span>
+              <span class="route-step__time">2分</span>
+            </div>
+          </div>
+          <p class="spot-card__desc">天祖神社に隣接し、商店街の入り口が鳥居になっているユニークなたたずまい。大塚駅南口に広がる、昔ながらの小さな商店が軒を連ねる下町商店街。</p>
+          <div class="spot-card__links">
+            <a href="https://maps.google.com/?q=東京都豊島区南大塚3-53-7+サンモール大塚台商店街" target="_blank" rel="noopener" class="spot-card__link spot-card__link--map">Googleマップで開く →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Map -->
+    <div class="areapage__map-wrap">
+      <div id="areamap"></div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  <ul class="site-footer__nav">
+    <li><a href="/otsuka/ja/legal/">特定商取引法</a></li>
+    <li><a href="https://www.kasoku.co.jp/privacy" target="_blank" rel="noopener">プライバシーポリシー</a></li>
+    <li><a href="https://www.kasoku.co.jp/" target="_blank" rel="noopener">運営会社</a></li>
+  </ul>
+  <p class="site-footer__copy">&copy; 2026 NEIGHBORS HOTEL. All rights reserved.</p>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV/XN/WPgU=" crossorigin=""></script>
+<script src="/otsuka/assets/js/main.js"></script>
+<script>
+(function () {
+  /* ── Leaflet Map ── */
+  var HOTEL = { lat: 35.7300684, lng: 139.7266689 };
+  var POPUP_MAP_LABEL = 'Googleマップで開く →';
+  var HOTEL_LABEL = 'NEIGHBORS HOTEL TOKYO OTSUKA';
+
+  var map = L.map('areamap', { zoomControl: true }).setView([35.7210, 139.7240], 13);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains: 'abcd', maxZoom: 19
+  }).addTo(map);
+
+  /* Hotel marker */
+  var hotelIcon = L.divIcon({
+    className: '',
+    html: '<div style="width:14px;height:14px;background:#865b39;border:3px solid #f5efe6;border-radius:50%;box-shadow:0 1px 5px rgba(0,0,0,.35)"></div>',
+    iconSize: [14, 14], iconAnchor: [7, 7]
+  });
+  L.marker([HOTEL.lat, HOTEL.lng], { icon: hotelIcon }).addTo(map)
+    .bindPopup('<div style="font-family:\'Noto Serif JP\',serif;font-size:12px"><strong>' + HOTEL_LABEL + '</strong><br><span style="opacity:.6">〒170-0005 東京都豊島区南大塚3-38-5</span></div>');
+
+  /* Spot markers */
+  function makeIcon(num) {
+    return L.divIcon({
+      className: '',
+      html: '<div style="width:32px;height:32px;background:#865b39;color:#f5efe6;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-size:12px;font-weight:700;box-shadow:0 2px 8px rgba(58,37,16,.35);border:2px solid rgba(245,239,230,.9);letter-spacing:.05em">' + (num < 10 ? '0' + num : num) + '</div>',
+      iconSize: [32, 32], iconAnchor: [16, 16], popupAnchor: [0, -20]
+    });
+  }
+
+  var markers = {};
+  var cards = document.querySelectorAll('.spot-card');
+
+  cards.forEach(function (card) {
+    var id   = parseInt(card.id.replace('spot-', ''));
+    var lat  = parseFloat(card.dataset.lat);
+    var lng  = parseFloat(card.dataset.lng);
+    var name = card.querySelector('.spot-card__name').textContent;
+    var time = card.querySelector('.spot-card__time').textContent;
+    var mapLink = card.querySelector('.spot-card__link--map');
+    var gmapsHref = mapLink ? mapLink.href : '#';
+
+    var marker = L.marker([lat, lng], { icon: makeIcon(id) }).addTo(map);
+    marker.bindPopup(
+      '<div style="font-family:\'Noto Serif JP\',serif;min-width:150px">' +
+      '<strong style="font-size:13px">' + name + '</strong>' +
+      '<div style="font-size:11px;color:#865b39;font-weight:700;margin:4px 0 6px">' + time + '</div>' +
+      '<a href="' + gmapsHref + '" target="_blank" style="font-size:11px;color:#865b39;text-decoration:underline">' + POPUP_MAP_LABEL + '</a>' +
+      '</div>'
+    );
+    markers[id] = { marker: marker, lat: lat, lng: lng };
+
+    card.addEventListener('click', function () {
+      activate(id);
+      map.setView([lat, lng], 15, { animate: true });
+      marker.openPopup();
+    });
+    marker.on('click', function () {
+      activate(id);
+      card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  });
+
+  function activate(id) {
+    cards.forEach(function (c) { c.classList.remove('spot-card--active'); });
+    var el = document.getElementById('spot-' + id);
+    if (el) el.classList.add('spot-card--active');
+  }
+
+  /* URL param ?spot=N */
+  var param = parseInt(new URLSearchParams(location.search).get('spot'));
+  if (param && markers[param]) {
+    activate(param);
+    setTimeout(function () {
+      map.setView([markers[param].lat, markers[param].lng], 15, { animate: false });
+      markers[param].marker.openPopup();
+      var el = document.getElementById('spot-' + param);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }, 200);
+  }
+
+  /* SP burger */
+  (function () {
+    var burger = document.getElementById('spBurger');
+    var drawer = document.getElementById('spDrawer');
+    if (!burger || !drawer) return;
+    burger.addEventListener('click', function () {
+      burger.classList.toggle('open');
+      drawer.classList.toggle('open');
+      document.body.style.overflow = drawer.classList.contains('open') ? 'hidden' : '';
+    });
+    drawer.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        burger.classList.remove('open');
+        drawer.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  }());
+}());
+</script>
+</body>
+</html>

@@ -1144,4 +1144,287 @@ ul, ol { list-style: none; }
   /* ── Legal (SP) ── */
   .legal-page { padding: 32px 20px; }
   .legal-row { grid-template-columns: 8em 1fr; }
+
+  /* ── Area Page (SP) ── */
+  .areapage { padding-left: 0 !important; }
+  .areapage__header { padding: 20px 20px 16px !important; }
+  .areapage__back { margin-bottom: 16px; }
+  .areapage__content {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 280px auto;
+  }
+  .areapage__map-wrap {
+    position: relative !important;
+    height: 280px !important;
+    top: auto !important;
+    order: -1;
+  }
+  .areapage__list {
+    padding: 0 16px !important;
+    border-right: none !important;
+  }
+  .spot-card--active::before { left: -16px; }
 }
+
+/* ============================================================
+   Area Detail Page (PC)
+   ============================================================ */
+.areapage { padding-left: var(--sw); }
+
+.areapage__header {
+  padding: clamp(48px,7vh,96px) clamp(40px,5vw,80px) clamp(32px,4vh,48px);
+  border-bottom: 1px solid rgba(134,91,57,.1);
+}
+
+.areapage__back {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--en);
+  font-size: clamp(10px,.85vw,12px);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  opacity: .45;
+  margin-bottom: 28px;
+  transition: opacity .3s;
+  color: inherit;
+  text-decoration: none;
+  gap: 8px;
+}
+.areapage__back:hover { opacity: .9; }
+
+.areapage__eyebrow {
+  font-family: var(--en);
+  font-size: clamp(10px,.85vw,13px);
+  letter-spacing: .4em;
+  text-transform: uppercase;
+  opacity: .65;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.areapage__eyebrow::before {
+  content: '';
+  display: block;
+  width: 24px; height: 1px;
+  background: currentColor;
+  opacity: .5;
+  flex-shrink: 0;
+}
+
+.areapage__heading {
+  font-family: var(--ja);
+  font-size: clamp(22px,2.4vw,38px);
+  font-weight: 400;
+  letter-spacing: .08em;
+  margin-bottom: 14px;
+}
+
+.areapage__sub {
+  font-size: clamp(13px,1vw,15px);
+  opacity: .6;
+  letter-spacing: .06em;
+  line-height: 1.9;
+}
+
+.areapage__content {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  align-items: start;
+}
+
+/* ── Spot List (left) ── */
+.areapage__list {
+  padding: clamp(24px,3vh,40px) clamp(28px,3.5vw,48px);
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(134,91,57,.1);
+}
+
+.spot-card {
+  display: flex;
+  gap: clamp(12px,1.5vw,20px);
+  padding: clamp(20px,2.5vh,32px) 0;
+  border-bottom: 1px solid rgba(134,91,57,.08);
+  cursor: pointer;
+  position: relative;
+  transition: opacity .25s;
+}
+.spot-card:first-child { border-top: 1px solid rgba(134,91,57,.08); }
+
+.spot-card--active::before {
+  content: '';
+  position: absolute;
+  left: calc(-1 * clamp(28px,3.5vw,48px));
+  top: 0; bottom: 0;
+  width: 3px;
+  background: var(--accent);
+}
+
+.spot-card__num {
+  font-family: var(--en);
+  font-size: clamp(24px,2.5vw,38px);
+  font-weight: 700;
+  color: var(--accent);
+  opacity: .15;
+  flex-shrink: 0;
+  line-height: 1;
+  padding-top: 2px;
+  min-width: 2ch;
+  transition: opacity .25s;
+}
+.spot-card--active .spot-card__num { opacity: .5; }
+
+.spot-card__inner { flex: 1; min-width: 0; }
+
+.spot-card__tags {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.spot-card__cat {
+  font-family: var(--en);
+  font-size: clamp(9px,.75vw,10px);
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  opacity: .5;
+  border: 1px solid rgba(134,91,57,.3);
+  padding: 2px 7px;
+}
+
+.spot-card__time {
+  font-family: var(--en);
+  font-size: clamp(10px,.85vw,12px);
+  letter-spacing: .1em;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.spot-card__name {
+  font-family: var(--ja);
+  font-size: clamp(14px,1.2vw,19px);
+  font-weight: 400;
+  letter-spacing: .06em;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+/* Route steps */
+.spot-card__route {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 6px 4px;
+  margin-bottom: 14px;
+  padding: 10px 14px;
+  background: rgba(134,91,57,.05);
+  border-left: 2px solid rgba(134,91,57,.2);
+}
+
+.route-step { display: flex; flex-direction: column; gap: 1px; }
+
+.route-step__mode {
+  font-family: var(--en);
+  font-size: clamp(8px,.7vw,10px);
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  opacity: .5;
+  font-weight: 600;
+}
+.route-step--train .route-step__mode {
+  font-family: var(--ja);
+  text-transform: none;
+  letter-spacing: .04em;
+}
+
+.route-step__time {
+  font-family: var(--en);
+  font-size: clamp(12px,1vw,15px);
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: .05em;
+}
+
+.route-step__note {
+  font-family: var(--ja);
+  font-size: clamp(9px,.75vw,10px);
+  opacity: .5;
+  letter-spacing: .03em;
+}
+
+.route-step__arrow {
+  font-size: 12px;
+  opacity: .3;
+  align-self: center;
+  padding: 0 2px;
+  flex-shrink: 0;
+  padding-top: 14px;
+}
+
+.spot-card__desc {
+  font-family: var(--ja);
+  font-size: clamp(13px,1vw,15px);
+  line-height: 2;
+  opacity: .72;
+  letter-spacing: .04em;
+  margin-bottom: 14px;
+}
+
+.spot-card__links {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.spot-card__link {
+  font-family: var(--en);
+  font-size: clamp(10px,.85vw,11px);
+  letter-spacing: .15em;
+  transition: opacity .3s;
+  color: inherit;
+  text-decoration: none;
+}
+.spot-card__link--official {
+  opacity: .4;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.spot-card__link--official:hover { opacity: .8; }
+.spot-card__link--map {
+  color: var(--accent);
+  font-weight: 600;
+  opacity: .8;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.spot-card__link--map:hover { opacity: 1; }
+
+/* ── Map (right, sticky) ── */
+.areapage__map-wrap {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+}
+
+#areamap { width: 100%; height: 100%; }
+
+/* ── Area section CTA (main TOP page) ── */
+.area-cta {
+  text-align: right;
+  padding-top: clamp(16px,2vh,24px);
+}
+.area-cta__link {
+  font-family: var(--en);
+  font-size: clamp(11px,.9vw,13px);
+  letter-spacing: .2em;
+  color: var(--accent);
+  opacity: .8;
+  transition: opacity .3s;
+  text-decoration: none;
+}
+.area-cta__link:hover { opacity: 1; }
+.area__spot { cursor: default; }
+a.area__spot { cursor: pointer; text-decoration: none; color: inherit; }

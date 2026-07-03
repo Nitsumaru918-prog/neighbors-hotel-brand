@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>주변 관광 안내 — NEIGHBORS HOTEL TOKYO OTSUKA</title>
+  <meta name="description" content="NEIGHBORS HOTEL TOKYO OTSUKA 주변 추천 스팟: 텐소 신사, 와세다 대학교, 선샤인 시티, 선몰 오쓰카다이 상점가.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/otsuka/assets/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="canonical" href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/area/">
+  <link rel="alternate" hreflang="ja"      href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/area/">
+  <link rel="alternate" hreflang="en"      href="https://www.neighbors-hotel-tokyo.com/otsuka/en/area/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/area/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/area/">
+  <link rel="alternate" hreflang="ko"      href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/area/">
+  <link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/area/">
+  <link rel="icon" type="image/png" href="/otsuka/assets/favicon/favicon_NH_overlap_512x512.png">
+  <link rel="apple-touch-icon" href="/otsuka/assets/favicon/favicon_NH_overlap_512x512.png">
+</head>
+<body>
+
+<!-- SP Header -->
+<header class="sp-header">
+  <div class="sp-header__logo">
+    <a href="/otsuka/ko/"><img src="/otsuka/assets/images/logo.png" alt="NEIGHBORS HOTEL TOKYO OTSUKA"></a>
+  </div>
+  <button class="sp-burger" id="spBurger" aria-label="menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- SP Drawer -->
+<nav class="sp-drawer" id="spDrawer">
+  <ul class="sp-drawer__nav">
+    <li><a href="/otsuka/ko/#about">About</a></li>
+    <li><a href="/otsuka/ko/#rooms">Rooms</a></li>
+    <li><a href="/otsuka/ko/#area">Area</a></li>
+    <li><a href="/otsuka/ko/#amenities">Amenities</a></li>
+    <li><a href="/otsuka/ko/#access">Access</a></li>
+  </ul>
+  <p class="sp-drawer__lang-label">Language</p>
+  <ul class="sp-drawer__lang">
+    <li><a href="/otsuka/ja/area/">日本語</a></li>
+    <li><a href="/otsuka/en/area/">English</a></li>
+    <li><a href="/otsuka/zh-hans/area/">简体中文</a></li>
+    <li><a href="/otsuka/zh-hant/area/">繁體中文</a></li>
+    <li><a href="/otsuka/ko/area/">한국어</a></li>
+  </ul>
+  <div class="sp-drawer__reserve">
+    <a class="sp-drawer__reserve-btn" href="#" target="_blank">RESERVE</a>
+  </div>
+</nav>
+
+<!-- PC Sidebar -->
+<aside class="side">
+  <div class="side-logo">
+    <a href="/otsuka/ko/"><img src="/otsuka/assets/images/logo.png" alt="NEIGHBORS HOTEL TOKYO OTSUKA"></a>
+  </div>
+  <nav><ul class="side-nav">
+    <li><a href="/otsuka/ko/#about">About</a></li>
+    <li><a href="/otsuka/ko/#rooms">Rooms</a></li>
+    <li><a href="/otsuka/ko/#area" class="active">Area</a></li>
+    <li><a href="/otsuka/ko/#amenities">Amenities</a></li>
+    <li><a href="/otsuka/ko/#access">Access</a></li>
+  </ul></nav>
+  <div class="side-lang">
+    <p class="side-lang__label">Language</p>
+    <ul class="side-lang__list">
+      <li><a href="/otsuka/ja/area/">日本語</a></li>
+      <li><a href="/otsuka/en/area/">English</a></li>
+      <li><a href="/otsuka/zh-hans/area/">简体中文</a></li>
+      <li><a href="/otsuka/zh-hant/area/">繁體中文</a></li>
+      <li><a href="/otsuka/ko/area/">한국어</a></li>
+    </ul>
+  </div>
+  <div class="side-reserve">
+    <a class="side-reserve__btn" href="#" target="_blank">RESERVE</a>
+  </div>
+</aside>
+
+<!-- Area Detail Page -->
+<div class="areapage">
+
+  <div class="areapage__header">
+    <a href="/otsuka/ko/#area" class="areapage__back">← 호텔로 돌아가기</a>
+    <p class="areapage__eyebrow">Area Guide</p>
+    <h1 class="areapage__heading">주변 관광 안내</h1>
+    <p class="areapage__sub">도보로 이동 가능한 가까운 스팟부터, 전철로 편리하게 갈 수 있는 관광지까지.</p>
+  </div>
+
+  <div class="areapage__content">
+
+    <!-- Spot List -->
+    <div class="areapage__list">
+
+      <!-- 01 텐소 신사 -->
+      <div class="spot-card" id="spot-1" data-lat="35.7279" data-lng="139.7327">
+        <div class="spot-card__num">01</div>
+        <div class="spot-card__inner">
+          <div class="spot-card__tags">
+            <span class="spot-card__cat">신사</span>
+            <span class="spot-card__time">도보 2분</span>
+          </div>
+          <h2 class="spot-card__name">텐소 신사</h2>
+          <div class="spot-card__route">
+            <div class="route-step route-step--walk">
+              <span class="route-step__mode">도보</span>
+              <span class="route-step__time">2분</span>
+            </div>
+          </div>
+          <p class="spot-card__desc">호텔 바로 옆에 위치한 신사. 가마쿠라 시대 말기(1320년대)에 창건된 것으로 전해지며 아마테라스 오미카미를 모시는 유서 깊은 사당. 9월 가마 축제로도 지역 주민들에게 사랑받고 있다.</p>
+          <div class="spot-card__links">
+            <a href="https://tensojinja.or.jp/" target="_blank" rel="noopener" class="spot-card__link spot-card__link--official">공식 사이트</a>
+            <a href="https://maps.google.com/?q=東京都豊島区南大塚3-49-1+天祖神社" target="_blank" rel="noopener" class="spot-card__link spot-card__link--map">Google 지도로 열기 →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02 와세다 대학교 -->
+      <div class="spot-card" id="spot-2" data-lat="35.7089" data-lng="139.7196">
+        <div class="spot-card__num">02</div>
+        <div class="spot-card__inner">
+          <div class="spot-card__tags">
+            <span class="spot-card__cat">대학교</span>
+            <span class="spot-card__time">약 24분</span>
+          </div>
+          <h2 class="spot-card__name">와세다 대학교</h2>
+          <div class="spot-card__route">
+            <div class="route-step route-step--walk">
+              <span class="route-step__mode">도보</span>
+              <span class="route-step__time">4분</span>
+              <span class="route-step__note">오쓰카역앞까지</span>
+            </div>
+            <span class="route-step__arrow">→</span>
+            <div class="route-step route-step--train">
+              <span class="route-step__mode">도덴 아라카와선</span>
+              <span class="route-step__time">약 12분</span>
+              <span class="route-step__note">오쓰카역앞 → 와세다</span>
+            </div>
+            <span class="route-step__arrow">→</span>
+            <div class="route-step route-step--walk">
+              <span class="route-step__mode">도보</span>
+              <span class="route-step__time">8분</span>
+              <span class="route-step__note">와세다역에서</span>
+            </div>
+          </div>
+          <p class="spot-card__desc">「2026년 진정 강한 대학 순위」전국 2위. 1882년 창립, 약 4만 명의 학생이 재학 중인 명문 대학교. 넓은 캠퍼스는 관광 명소로도 인기가 높다.</p>
+          <div class="spot-card__links">
+            <a href="https://www.waseda.jp/top/" target="_blank" rel="noopener" class="spot-card__link spot-card__link--official">공식 사이트</a>
+            <a href="https://maps.google.com/?q=東京都新宿区戸塚町1-104+早稲田大学" target="_blank" rel="noopener" class="spot-card__link spot-card__link--map">Google 지도로 열기 →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 03 선샤인 시티 -->
+      <div class="spot-card" id="spot-3" data-lat="35.7285" data-lng="139.7182">
+        <div class="spot-card__num">03</div>
+        <div class="spot-card__inner">
+          <div class="spot-card__tags">
+            <span class="spot-card__cat">복합시설</span>
+            <span class="spot-card__time">도보 13분</span>
+          </div>
+          <h2 class="spot-card__name">이케부쿠로 선샤인 시티</h2>
+          <div class="spot-card__route">
+            <div class="route-step route-step--walk">
+              <span class="route-step__mode">도보</span>
+              <span class="route-step__time">13분</span>
+            </div>
+          </div>
+          <p class="spot-card__desc">초고층 빌딩을 중심으로 한 복합 상업 시설. 수족관·전망대·애니메이션 숍·쇼핑몰·박물관·영화관 등 다양한 시설이 모여 있어 하루 종일 즐길 수 있는 도시형 엔터테인먼트 공간.</p>
+          <div class="spot-card__links">
+            <a href="https://maps.google.com/?q=東京都豊島区東池袋3-1-2+サンシャインシティ" target="_blank" rel="noopener" class="spot-card__link spot-card__link--map">Google 지도로 열기 →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 04 선몰 오쓰카다이 상점가 -->
+      <div class="spot-card" id="spot-4" data-lat="35.7298" data-lng="139.7331">
+        <div class="spot-card__num">04</div>
+        <div class="spot-card__inner">
+          <div class="spot-card__tags">
+            <span class="spot-card__cat">상점가</span>
+            <span class="spot-card__time">도보 2분</span>
+          </div>
+          <h2 class="spot-card__name">선몰 오쓰카다이 상점가</h2>
+          <div class="spot-card__route">
+            <div class="route-step route-step--walk">
+              <span class="route-step__mode">도보</span>
+              <span class="route-step__time">2분</span>
+            </div>
+          </div>
+          <p class="spot-card__desc">텐소 신사에 인접해 있으며 상점가 입구가 도리이(鳥居)로 되어 있는 독특한 모습. 오쓰카역 남쪽 출구에 펼쳐지는 옛 정취 가득한 시타마치 상점가.</p>
+          <div class="spot-card__links">
+            <a href="https://maps.google.com/?q=東京都豊島区南大塚3-53-7+サンモール大塚台商店街" target="_blank" rel="noopener" class="spot-card__link spot-card__link--map">Google 지도로 열기 →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Map -->
+    <div class="areapage__map-wrap">
+      <div id="areamap"></div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="site-footer">
+  <ul class="site-footer__nav">
+    <li><a href="/otsuka/ko/legal/">특정상거래법</a></li>
+    <li><a href="https://www.kasoku.co.jp/privacy" target="_blank" rel="noopener">개인정보 처리방침</a></li>
+    <li><a href="https://www.kasoku.co.jp/" target="_blank" rel="noopener">운영사</a></li>
+  </ul>
+  <p class="site-footer__copy">&copy; 2026 NEIGHBORS HOTEL. All rights reserved.</p>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV/XN/WPgU=" crossorigin=""></script>
+<script src="/otsuka/assets/js/main.js"></script>
+<script>
+(function () {
+  var HOTEL = { lat: 35.7300684, lng: 139.7266689 };
+  var POPUP_MAP_LABEL = 'Google 지도로 열기 →';
+  var HOTEL_LABEL = 'NEIGHBORS HOTEL TOKYO OTSUKA';
+
+  var map = L.map('areamap', { zoomControl: true }).setView([35.7210, 139.7240], 13);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains: 'abcd', maxZoom: 19
+  }).addTo(map);
+
+  var hotelIcon = L.divIcon({
+    className: '',
+    html: '<div style="width:14px;height:14px;background:#865b39;border:3px solid #f5efe6;border-radius:50%;box-shadow:0 1px 5px rgba(0,0,0,.35)"></div>',
+    iconSize: [14, 14], iconAnchor: [7, 7]
+  });
+  L.marker([HOTEL.lat, HOTEL.lng], { icon: hotelIcon }).addTo(map)
+    .bindPopup('<div style="font-size:12px"><strong>' + HOTEL_LABEL + '</strong><br><span style="opacity:.6">도쿄도 도시마구 미나미오쓰카 3-38-5</span></div>');
+
+  function makeIcon(num) {
+    return L.divIcon({
+      className: '',
+      html: '<div style="width:32px;height:32px;background:#865b39;color:#f5efe6;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-size:12px;font-weight:700;box-shadow:0 2px 8px rgba(58,37,16,.35);border:2px solid rgba(245,239,230,.9);letter-spacing:.05em">' + (num < 10 ? '0' + num : num) + '</div>',
+      iconSize: [32, 32], iconAnchor: [16, 16], popupAnchor: [0, -20]
+    });
+  }
+
+  var markers = {};
+  var cards = document.querySelectorAll('.spot-card');
+
+  cards.forEach(function (card) {
+    var id   = parseInt(card.id.replace('spot-', ''));
+    var lat  = parseFloat(card.dataset.lat);
+    var lng  = parseFloat(card.dataset.lng);
+    var name = card.querySelector('.spot-card__name').textContent;
+    var time = card.querySelector('.spot-card__time').textContent;
+    var mapLink = card.querySelector('.spot-card__link--map');
+    var gmapsHref = mapLink ? mapLink.href : '#';
+
+    var marker = L.marker([lat, lng], { icon: makeIcon(id) }).addTo(map);
+    marker.bindPopup(
+      '<div style="min-width:150px">' +
+      '<strong style="font-size:13px">' + name + '</strong>' +
+      '<div style="font-size:11px;color:#865b39;font-weight:700;margin:4px 0 6px">' + time + '</div>' +
+      '<a href="' + gmapsHref + '" target="_blank" style="font-size:11px;color:#865b39;text-decoration:underline">' + POPUP_MAP_LABEL + '</a>' +
+      '</div>'
+    );
+    markers[id] = { marker: marker, lat: lat, lng: lng };
+
+    card.addEventListener('click', function () {
+      activate(id);
+      map.setView([lat, lng], 15, { animate: true });
+      marker.openPopup();
+    });
+    marker.on('click', function () {
+      activate(id);
+      card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  });
+
+  function activate(id) {
+    cards.forEach(function (c) { c.classList.remove('spot-card--active'); });
+    var el = document.getElementById('spot-' + id);
+    if (el) el.classList.add('spot-card--active');
+  }
+
+  var param = parseInt(new URLSearchParams(location.search).get('spot'));
+  if (param && markers[param]) {
+    activate(param);
+    setTimeout(function () {
+      map.setView([markers[param].lat, markers[param].lng], 15, { animate: false });
+      markers[param].marker.openPopup();
+      var el = document.getElementById('spot-' + param);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }, 200);
+  }
+
+  (function () {
+    var burger = document.getElementById('spBurger');
+    var drawer = document.getElementById('spDrawer');
+    if (!burger || !drawer) return;
+    burger.addEventListener('click', function () {
+      burger.classList.toggle('open');
+      drawer.classList.toggle('open');
+      document.body.style.overflow = drawer.classList.contains('open') ? 'hidden' : '';
+    });
+    drawer.querySelectorAll('a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        burger.classList.remove('open');
+        drawer.classList.remove('open');
+        document.body.style.overflow = '';
+      });
+    });
+  }());
+}());
+</script>
+</body>
+</html>

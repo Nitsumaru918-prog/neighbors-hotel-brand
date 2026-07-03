@@ -75,6 +75,16 @@
     { "source": "/ikebukuro-north/zh-hant/legal",         "destination": "/ikebukuro-north/zh-hant/legal/index.html" },
     { "source": "/ikebukuro-north/zh-hant/legal/",        "destination": "/ikebukuro-north/zh-hant/legal/index.html" },
     { "source": "/ikebukuro-north/ko/legal",              "destination": "/ikebukuro-north/ko/legal/index.html" },
-    { "source": "/ikebukuro-north/ko/legal/",             "destination": "/ikebukuro-north/ko/legal/index.html" }
+    { "source": "/ikebukuro-north/ko/legal/",             "destination": "/ikebukuro-north/ko/legal/index.html" },
+    { "source": "/otsuka/ja/area",                        "destination": "/otsuka/ja/area/index.html" },
+    { "source": "/otsuka/ja/area/",                       "destination": "/otsuka/ja/area/index.html" },
+    { "source": "/otsuka/en/area",                        "destination": "/otsuka/en/area/index.html" },
+    { "source": "/otsuka/en/area/",                       "destination": "/otsuka/en/area/index.html" },
+    { "source": "/otsuka/zh-hans/area",                   "destination": "/otsuka/zh-hans/area/index.html" },
+    { "source": "/otsuka/zh-hans/area/",                  "destination": "/otsuka/zh-hans/area/index.html" },
+    { "source": "/otsuka/zh-hant/area",                   "destination": "/otsuka/zh-hant/area/index.html" },
+    { "source": "/otsuka/zh-hant/area/",                  "destination": "/otsuka/zh-hant/area/index.html" },
+    { "source": "/otsuka/ko/area",                        "destination": "/otsuka/ko/area/index.html" },
+    { "source": "/otsuka/ko/area/",                       "destination": "/otsuka/ko/area/index.html" }
   ]
 }
