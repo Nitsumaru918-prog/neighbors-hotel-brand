@@ -54,7 +54,7 @@
           fadeObs.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.3 });
     fadeEls.forEach(function (el) { fadeObs.observe(el); });
   } else {
     fadeEls.forEach(function (el) { el.classList.add('visible'); });
