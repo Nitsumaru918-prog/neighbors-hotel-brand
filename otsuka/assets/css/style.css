@@ -600,35 +600,40 @@ ul, ol { list-style: none; }
 }
 .amenities-grid__caption {
   font-family: var(--ja);
-  font-size: clamp(11px,.85vw,13px);
+  font-size: clamp(13px,1.1vw,17px);
+  font-weight: 500;
   letter-spacing: .06em;
-  opacity: .7;
+  opacity: .8;
+  line-height: 1.6;
 }
 .amenities-list__label {
   font-family: var(--en);
-  font-size: clamp(9px,.75vw,11px);
-  letter-spacing: .3em;
+  font-size: clamp(10px,.85vw,12px);
+  letter-spacing: .35em;
+  font-weight: 500;
   text-transform: uppercase;
-  opacity: .4;
-  margin-bottom: 16px;
+  opacity: .75;
+  margin-bottom: clamp(20px,2.5vh,32px);
 }
 .amenities-list__cats {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: clamp(20px,2.5vw,40px);
+  gap: clamp(20px,2.5vh,36px) clamp(40px,5vw,80px);
 }
 .amenities-list__cat-name {
-  font-family: var(--ja);
-  font-size: clamp(11px,.9vw,13px);
-  font-weight: 500;
-  letter-spacing: .08em;
-  opacity: .7;
+  font-family: var(--en);
+  font-size: clamp(11px,.95vw,14px);
+  font-weight: 700;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  opacity: .55;
   margin-bottom: 4px;
 }
 .amenities-list__items {
-  font-size: clamp(11px,.85vw,13px);
-  opacity: .6;
-  line-height: 1.7;
+  font-family: var(--ja);
+  font-size: clamp(13px,1vw,16px);
+  opacity: .8;
+  line-height: 2;
   letter-spacing: .04em;
 }
 
