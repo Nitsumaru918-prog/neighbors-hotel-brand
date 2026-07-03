@@ -1,0 +1,1048 @@
+/* ============================================================
+   NEIGHBORS HOTEL KAMI-IKEBUKURO
+   style.css
+   ============================================================ */
+
+/* ── リセット・変数 ──────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:     #f5efe6;
+  --text:   #3a2510;
+  --accent: #865b39;
+  --sw:     clamp(160px,15vw,220px);
+  --en:     'Libre Baskerville', Georgia, serif;
+  --ja:     'Noto Serif JP', 'Yu Mincho', serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* ── サイドバー ──────────────────────────────────────────── */
+.side {
+  position: fixed;
+  top: 0; left: 0;
+  width: var(--sw);
+  height: 100svh;
+  background: var(--bg);
+  border-right: 1px solid rgba(134,91,57,.12);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(24px,3vh,40px) clamp(20px,2vw,32px);
+  overflow-y: auto;
+  opacity: 0;
+  transition: opacity .4s ease;
+  pointer-events: none;
+}
+.side.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.side-logo { margin-bottom: clamp(32px,4vh,52px); }
+.side-logo img {
+  width: clamp(80px,10vw,120px);
+  height: auto;
+  object-fit: contain;
+  filter: invert(38%) sepia(30%) saturate(600%) hue-rotate(10deg) brightness(75%);
+}
+.side-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.side-nav a {
+  font-family: var(--en);
+  font-size: clamp(10px,.9vw,13px);
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  opacity: .55;
+  padding: 6px 0;
+  transition: opacity .3s;
+  display: block;
+}
+.side-nav a:hover,
+.side-nav a.active { opacity: 1; }
+
+/* ── 言語切り替え ────────────────────────────────────────── */
+.side-lang { margin-top: auto; padding-top: clamp(24px,3vh,40px); }
+.side-lang__label {
+  font-family: var(--en);
+  font-size: clamp(9px,.75vw,11px);
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  opacity: .4;
+  margin-bottom: 10px;
+}
+.side-lang__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.side-lang__list li a,
+.side-lang__list a {
+  font-family: var(--en);
+  font-size: clamp(9px,.8vw,11px);
+  letter-spacing: .1em;
+  opacity: .5;
+  transition: opacity .3s;
+}
+.side-lang__list li a:hover,
+.side-lang__list a:hover { opacity: 1; }
+
+/* ── FV ──────────────────────────────────────────────────── */
+.fv {
+  display: flex;
+  height: 100svh;
+  min-height: 600px;
+  padding-left: var(--sw);
+  overflow: hidden;
+  background: var(--bg);
+}
+.fv__left {
+  flex: 0 0 42%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(40px,5vh,80px) clamp(32px,3.5vw,56px) clamp(40px,5vh,80px) clamp(24px,3vw,48px);
+  position: relative;
+  z-index: 2;
+}
+.fv__left::after {
+  content: '';
+  position: absolute;
+  right: 0; top: 8%; bottom: 8%;
+  width: 1px;
+  background: linear-gradient(to bottom,
+    transparent,
+    rgba(134,91,57,.2) 25%,
+    rgba(134,91,57,.2) 75%,
+    transparent);
+}
+.fv__logo { margin-bottom: clamp(28px, 3.5vh, 48px); }
+.fv__logo img {
+  width: clamp(200px, 30vw, 432px);
+  height: auto;
+  max-height: clamp(40px, 5.2vw, 75px);
+  object-fit: contain;
+  object-position: left center;
+  display: block;
+  filter: invert(38%) sepia(30%) saturate(600%) hue-rotate(10deg) brightness(75%);
+}
+.fv__location {
+  font-family: var(--en);
+  font-size: clamp(9px, .75vw, 12px);
+  letter-spacing: .38em;
+  font-weight: 500;
+  text-transform: uppercase;
+  opacity: .75;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.fv__location::before {
+  content: '';
+  display: block;
+  width: 28px; height: 1px;
+  background: currentColor;
+  opacity: .5;
+  flex-shrink: 0;
+}
+.fv__right {
+  flex: 1;
+  position: relative;
+  padding: clamp(60px,10vh,120px) clamp(40px,7vw,100px) clamp(60px,10vh,120px) clamp(24px,2.5vw,40px);
+}
+.slideshow {
+  position: relative;
+  width: 100%; height: 100%;
+  overflow: hidden;
+}
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1.4s ease;
+}
+.slide.active { opacity: 1; }
+.slide img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(100%) brightness(.82);
+  transition: filter .8s;
+}
+.fv__right:hover .slide.active img {
+  filter: grayscale(0%) brightness(.92);
+}
+.slide-dots {
+  position: absolute;
+  bottom: clamp(40px, 5vh, 72px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 8px;
+}
+.slide-dot {
+  width: 24px; height: 2px;
+  background: rgba(245,239,230,.3);
+  border: none; outline: none; padding: 0;
+  cursor: pointer;
+  transition: width .4s, background .4s;
+}
+.slide-dot.active {
+  width: 40px;
+  background: rgba(245,239,230,.9);
+}
+.slide-counter {
+  position: absolute;
+  bottom: clamp(36px, 4.5vh, 66px);
+  right: clamp(40px, 7vw, 116px);
+  z-index: 10;
+  font-family: var(--en);
+  font-size: 11px;
+  letter-spacing: .15em;
+  color: rgba(245,239,230,.45);
+}
+.slide-counter span {
+  font-size: 14px;
+  color: rgba(245,239,230,.88);
+}
+
+/* ── ABOUT ───────────────────────────────────────────────── */
+#about {
+  min-height: 100svh;
+  padding: clamp(60px,8vh,120px) clamp(40px,5vw,80px) clamp(60px,8vh,120px) calc(var(--sw) + clamp(32px,4vw,60px));
+  display: flex;
+  align-items: center;
+}
+.about__inner {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  gap: clamp(40px, 5vw, 80px);
+}
+.about__images {
+  flex: 0 0 52%;
+  position: relative;
+  height: 700px;
+}
+.aimg { position: absolute; overflow: hidden; }
+.aimg img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .7s;
+}
+.aimg:hover img { transform: scale(1.04); }
+.aimg::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 20%;
+  background: linear-gradient(to bottom, transparent, var(--bg));
+  pointer-events: none;
+  z-index: 5;
+}
+.aimg--1 { left: 20px;  top: 20px;  width: 230px; height: 500px; z-index: 4; }
+.aimg--2 { left: 290px; top: 160px; width: 260px; height: 250px; z-index: 2; }
+.aimg--3 { left: 185px; top: 400px; width: 240px; height: 240px; z-index: 3; }
+.about__text {
+  flex: 1;
+  position: relative;
+  padding-top: 160px;
+}
+.about__label {
+  position: absolute;
+  top: 0; left: 0;
+  font-family: var(--en);
+  font-size: clamp(13px, 1vw, 15px);
+  letter-spacing: .35em;
+  font-weight: 500;
+  text-transform: uppercase;
+  opacity: .65;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.about__label::before {
+  content: '';
+  display: block;
+  width: 24px; height: 1px;
+  background: currentColor;
+  opacity: .5;
+  flex-shrink: 0;
+}
+.about__heading {
+  font-family: var(--ja);
+  font-size: clamp(18px, 1.8vw, 34px);
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: .06em;
+  margin-bottom: clamp(24px, 3.2vh, 40px);
+  white-space: nowrap;
+}
+.about__body {
+  font-family: var(--ja);
+  font-size: clamp(13px, 1vw, 15px);
+  line-height: 2.2;
+  opacity: .82;
+  letter-spacing: .06em;
+  margin-bottom: clamp(20px, 2.8vh, 32px);
+}
+.about__opened {
+  font-family: var(--en);
+  font-size: clamp(14px, 1.1vw, 18px);
+  letter-spacing: .22em;
+  opacity: .55;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.about__opened::before {
+  content: '';
+  display: block;
+  width: 20px; height: 1px;
+  background: currentColor;
+  opacity: .5;
+}
+
+/* ── ROOMS ───────────────────────────────────────────────── */
+#rooms {
+  min-height: 100svh;
+  padding: clamp(60px,8vh,120px) clamp(40px,5vw,80px) clamp(60px,8vh,120px) calc(var(--sw) + clamp(32px,4vw,60px));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.rooms__header { margin-bottom: clamp(40px, 5vh, 64px); }
+.eyebrow {
+  font-family: var(--en);
+  font-size: clamp(13px, 1vw, 15px);
+  letter-spacing: .35em;
+  font-weight: 500;
+  text-transform: uppercase;
+  opacity: .65;
+  margin-bottom: clamp(12px, 1.6vh, 20px);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.eyebrow::before {
+  content: '';
+  display: block;
+  width: 24px; height: 1px;
+  background: currentColor;
+  opacity: .5;
+  flex-shrink: 0;
+}
+.sec-heading {
+  font-family: var(--ja);
+  font-size: clamp(18px, 1.8vw, 34px);
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: .06em;
+  white-space: nowrap;
+}
+.rooms__header .sec-heading { margin-bottom: clamp(16px, 2vh, 24px); }
+.rooms__desc {
+  font-family: var(--ja);
+  font-size: clamp(13px, 1vw, 15px);
+  line-height: 2.2;
+  opacity: .82;
+  letter-spacing: .06em;
+}
+.rooms__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 3vw, 48px);
+}
+.room-card {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 2vh, 24px);
+}
+
+.room-card__img-link {
+  display: block;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+.room-card__img-link .room-card__img img {
+  transition: filter .8s, transform .7s;
+}
+.room-card__img-link:hover .room-card__img img {
+  filter: grayscale(0%) brightness(.92);
+  transform: scale(1.03);
+}
+
+.room-card__img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  position: relative;
+}
+.room-card__img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(100%) brightness(.82);
+  transition: filter .8s, transform .7s;
+}
+.room-card:hover .room-card__img img {
+  filter: grayscale(0%) brightness(.92);
+  transform: scale(1.03);
+}
+.room-card__img::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 20%;
+  background: linear-gradient(to bottom, transparent, var(--bg));
+  pointer-events: none;
+  z-index: 2;
+}
+.room-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.room-card__type {
+  font-family: var(--en);
+  font-size: clamp(13px, 1vw, 15px);
+  letter-spacing: .35em;
+  font-weight: 500;
+  text-transform: uppercase;
+  opacity: .65;
+}
+.room-card__name {
+  font-family: var(--en);
+  font-size: clamp(16px, 1.4vw, 22px);
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+.room-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--en);
+  font-size: clamp(13px, 1vw, 15px);
+  letter-spacing: .25em;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--text);
+  text-decoration: none;
+  opacity: .7;
+  transition: opacity .3s;
+  margin-top: 4px;
+}
+.room-card__link::after {
+  content: '→';
+  font-size: 1.1em;
+  transition: transform .3s;
+}
+.room-card__link:hover { opacity: 1; }
+.room-card__link:hover::after { transform: translateX(4px); }
+
+/* ── AREA ────────────────────────────────────────────────── */
+#area {
+  padding: clamp(60px,8vh,120px) clamp(40px,5vw,80px) clamp(60px,8vh,120px) calc(var(--sw) + clamp(32px,4vw,60px));
+}
+#area .eyebrow     { margin-bottom: clamp(12px, 1.6vh, 20px); }
+#area .sec-heading { margin-bottom: clamp(32px, 4vh, 56px); }
+
+.area__map {
+  position: relative;
+  width: 100%;
+}
+.area__map__bg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* スポット：position:absolute、%指定でレスポンシブ対応 */
+.area__spot {
+  position: absolute;
+  text-align: center;
+  /* フェードイン初期状態 */
+  opacity: 0;
+  transform: translate(-50%, -50%) translateY(16px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.area__spot.visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) translateY(0);
+}
+.area__spot img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* スポット名・説明文 */
+.spot__name {
+  font-family: var(--en);
+  font-size: clamp(13px,1.1vw,16px);
+  font-weight: 700;
+  letter-spacing: .05em;
+  color: #3a2510;
+  margin-top: 8px;
+  line-height: 1.4;
+  -webkit-text-stroke: 0.4px var(--bg);
+  paint-order: stroke fill;
+}
+.spot__desc {
+  font-family: var(--en);
+  font-size: clamp(11px,.9vw,14px);
+  letter-spacing: .03em;
+  color: #3a2510;
+  opacity: .85;
+  margin-top: 4px;
+  line-height: 1.5;
+  -webkit-text-stroke: 0.3px var(--bg);
+  paint-order: stroke fill;
+}
+
+/* 各スポットの位置・サイズ（背景1448x1086に対する%） */
+.area__spot--sakura { left: 26%;  top: 14%; width: 19%; transition-delay: 0s; }
+.area__spot--jizo   { left: 76%;  top: 20%; width: 19%; transition-delay: .2s; }
+.area__spot--hotel  { left: 50%;  top: 50%; width: 24%; transition-delay: .4s; }
+.area__spot--sugamo { left: 17%;  top: 74%; width: 19%; transition-delay: .6s; }
+.area__spot--bunkaz { left: 76%;  top: 78%; width: 19%; transition-delay: .8s; }
+
+/* ── PLACEHOLDER ─────────────────────────────────────────── */
+.placeholder {
+  min-height: 50vh;
+  padding: clamp(60px,8vh,120px) clamp(40px,5vw,80px) clamp(60px,8vh,120px) calc(var(--sw) + clamp(32px,4vw,60px));
+  display: flex;
+  align-items: center;
+}
+.placeholder p {
+  font-family: var(--en);
+  font-size: 11px;
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  opacity: .2;
+}
+
+/* ── 共通フェードアップ ──────────────────────────────────── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .8s ease, transform .8s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fade-up:nth-child(2) { transition-delay: .5s; }
+.fade-up:nth-child(3) { transition-delay: 1.0s; }
+.fade-up:nth-child(4) { transition-delay: 1.5s; }
+.fade-up:nth-child(5) { transition-delay: 2.0s; }
+
+/* ── AMENITIES ───────────────────────────────────────────── */
+#amenities {
+  padding: clamp(60px,8vh,120px) clamp(40px,5vw,80px) clamp(60px,8vh,120px) calc(var(--sw) + clamp(32px,4vw,60px));
+}
+#amenities .eyebrow     { margin-bottom: clamp(12px,1.6vh,20px); }
+#amenities .sec-heading { margin-bottom: clamp(32px,4vh,56px); }
+
+/* 画像グリッド：4列横一列 */
+.amenity__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(12px,1.5vw,24px);
+  margin-bottom: clamp(40px,5vh,64px);
+}
+.amenity__item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.amenity__img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+.amenity__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: grayscale(20%) brightness(.9);
+  transition: filter .8s, transform .7s;
+}
+.amenity__item:hover .amenity__img img {
+  filter: grayscale(0%) brightness(1);
+  transform: scale(1.03);
+}
+.amenity__caption {
+  font-family: var(--ja);
+  font-size: clamp(13px,1.1vw,17px);
+  font-weight: 500;
+  letter-spacing: .06em;
+  opacity: .8;
+  line-height: 1.6;
+}
+
+/* テキストリスト */
+.amenity__list {
+  border-top: 1px solid rgba(134,91,57,.15);
+  padding-top: clamp(24px,3vh,40px);
+}
+.amenity__list__label {
+  font-family: var(--en);
+  font-size: clamp(10px,.85vw,12px);
+  letter-spacing: .35em;
+  font-weight: 500;
+  text-transform: uppercase;
+  opacity: .75;
+  margin-bottom: clamp(20px,2.5vh,32px);
+}
+.amenity__list__cats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(20px,2.5vh,36px) clamp(40px,5vw,80px);
+}
+.amenity__list__cat {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.amenity__list__cat-name {
+  font-family: var(--en);
+  font-size: clamp(11px,.95vw,14px);
+  font-weight: 700;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  opacity: .55;
+}
+.amenity__list__items {
+  font-family: var(--ja);
+  font-size: clamp(13px,1vw,16px);
+  line-height: 2;
+  opacity: .8;
+  letter-spacing: .04em;
+}
+
+/* ── ACCESS ──────────────────────────────────────────────── */
+#access {
+  padding: clamp(60px,8vh,120px) clamp(40px,5vw,80px) clamp(60px,8vh,120px) calc(var(--sw) + clamp(32px,4vw,60px));
+}
+#access .eyebrow     { margin-bottom: clamp(12px,1.6vh,20px); }
+#access .sec-heading { margin-bottom: clamp(32px,4vh,56px); }
+
+.access__inner {
+  display: grid;
+  grid-template-columns: 1fr 1.8fr;
+  gap: clamp(40px,5vw,80px);
+  align-items: start;
+}
+.access__dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: clamp(16px,2vh,24px) clamp(20px,2.5vw,32px);
+}
+.access__dl dt {
+  font-family: var(--en);
+  font-size: clamp(10px,.85vw,13px);
+  letter-spacing: .28em;
+  font-weight: 500;
+  text-transform: uppercase;
+  opacity: .6;
+  padding-top: 2px;
+  white-space: nowrap;
+}
+.access__dl dd {
+  font-family: var(--ja);
+  font-size: clamp(13px,1vw,15px);
+  line-height: 1.8;
+  letter-spacing: .06em;
+}
+.access__map {
+  width: 100%;
+}
+.access__map iframe {
+  width: 100%;
+  height: 450px;
+  border: 0;
+  display: block;
+}
+
+/* ── RESERVE ボタン ──────────────────────────────────────── */
+.side-reserve { margin-top: clamp(20px,2.5vh,32px); }
+.side-reserve__btn {
+  display: block;
+  font-family: var(--en);
+  font-size: clamp(9px,.8vw,11px);
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  border: 1px solid var(--accent);
+  padding: 10px 14px;
+  text-align: center;
+  color: var(--accent);
+  transition: background .3s, color .3s;
+}
+.side-reserve__btn:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* ── FOOTER ─────────────────────────────────────────────── */
+.site-footer {
+  padding: clamp(40px,5vh,64px) clamp(40px,5vw,80px) clamp(40px,5vh,64px) calc(var(--sw) + clamp(32px,4vw,60px));
+  border-top: 1px solid rgba(134,91,57,.12);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+.site-footer__nav {
+  list-style: none;
+  display: flex;
+  gap: clamp(16px,2.5vw,36px);
+}
+.site-footer__nav a {
+  font-family: var(--en);
+  font-size: clamp(12px,.95vw,14px);
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: #555555;
+  text-decoration: none;
+  opacity: 1;
+  transition: opacity .3s;
+}
+.site-footer__nav a:hover { opacity: .7; }
+.site-footer__copy {
+  font-family: var(--en);
+  font-size: clamp(12px,.95vw,14px);
+  letter-spacing: .15em;
+  color: #555555;
+  opacity: .8;
+}
+
+
+/* ============================================================
+   RESPONSIVE ( SP: ~768px )
+   ============================================================ */
+
+/* SPヘッダーはSPのみ表示 */
+.sp-header { display: none; }
+.sp-drawer { display: none; }
+
+@media (max-width: 768px) {
+
+  /* ── サイドバー完全非表示 ────────────────────────────── */
+  .side { display: none !important; }
+
+  /* ── SPヘッダー表示 ──────────────────────────────────── */
+  .sp-header {
+    display: flex;
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 200;
+    height: 56px;
+    background: var(--bg);
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom: 1px solid rgba(134,91,57,.12);
+  }
+  /* FVページ：ロゴ非表示スタート → FVロゴが消えたら表示（JSで制御） */
+  .sp-header__logo {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .5s ease;
+  }
+  .sp-header__logo.logo--visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .sp-header__logo img {
+    height: 20px;
+    filter: invert(38%) sepia(30%) saturate(600%) hue-rotate(10deg) brightness(75%);
+    opacity: .8;
+    display: block;
+  }
+  .sp-header__logo a { display: block; }
+  /* 客室詳細の← backリンクは非表示 */
+  .sp-header__back { display: none !important; }
+
+  /* ── ハンバーガーボタン ──────────────────────────────── */
+  .sp-burger {
+    width: 32px; height: 32px;
+    display: flex; flex-direction: column;
+    justify-content: center; gap: 5px;
+    cursor: pointer; background: none; border: none; padding: 0;
+  }
+  .sp-burger span {
+    display: block; width: 24px; height: 1px;
+    background: var(--text);
+    transition: transform .3s, opacity .3s;
+  }
+  .sp-burger.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+  .sp-burger.open span:nth-child(2) { opacity: 0; }
+  .sp-burger.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+  /* ── ドロワーメニュー ────────────────────────────────── */
+  .sp-drawer {
+    display: flex;
+    position: fixed;
+    top: 56px; left: 0; right: 0; bottom: 0;
+    z-index: 190;
+    background: var(--bg);
+    padding: 40px 32px;
+    transform: translateX(100%);
+    transition: transform .4s ease;
+    overflow-y: auto;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .sp-drawer.open { transform: translateX(0); }
+  .sp-drawer__nav {
+    list-style: none;
+    display: flex; flex-direction: column; gap: 20px;
+  }
+  .sp-drawer__nav a {
+    font-family: var(--en);
+    font-size: 15px; letter-spacing: .28em;
+    text-transform: uppercase;
+    color: var(--text); text-decoration: none; opacity: .7;
+  }
+  .sp-drawer__lang {
+    border-top: 1px solid rgba(134,91,57,.15);
+    padding-top: 24px;
+  }
+  .sp-drawer__lang-label {
+    font-family: var(--en);
+    font-size: 10px; letter-spacing: .35em;
+    text-transform: uppercase; opacity: .4; margin-bottom: 12px;
+  }
+  .sp-drawer__lang-list {
+    list-style: none;
+    display: flex; flex-direction: column; gap: 12px;
+  }
+  .sp-drawer__lang-list a {
+    font-family: var(--en); font-size: 13px; letter-spacing: .2em;
+    color: var(--text); text-decoration: none; opacity: .55;
+  }
+  .sp-drawer__lang-list a.active { opacity: 1; font-weight: 700; }
+  .sp-drawer__reserve { margin-top: auto; }
+  .sp-drawer__reserve a {
+    display: block; background: #222222; color: #f5efe6;
+    font-family: var(--en); font-size: 11px; letter-spacing: .35em;
+    text-transform: uppercase; text-decoration: none;
+    text-align: center; padding: 14px 0;
+  }
+
+  /* ── body余白・padding リセット ──────────────────────── */
+  body { padding-top: 56px; }
+
+  /* サイドバー分のpadding-leftをリセット（全セクション） */
+  .fv,
+  #about, #rooms, #area, #amenities, #access,
+  .site-footer, .placeholder {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .fv {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    height: auto !important;
+    min-height: auto !important;
+    flex-direction: column;
+  }
+  .fv__right {
+    flex: none;
+    height: 56vw;
+    min-height: 240px;
+    order: 0;
+    padding: 0;
+    overflow: hidden; /* SP カルーセルのclip container */
+  }
+  .fv__left {
+    flex: none;
+    padding: 32px 24px 40px;
+    order: 1;
+  }
+  .fv__left::after { display: none; }
+  .fv__logo img {
+    width: clamp(160px, 60vw, 300px);
+    max-height: 32px;
+  }
+
+  /* ── SP FV カルーセル（translateX方式）──────────────── */
+  .slideshow {
+    overflow: visible !important;
+    display: flex;
+    touch-action: pan-y;
+    cursor: grab;
+  }
+  .slideshow.is-dragging { cursor: grabbing; }
+  .slide {
+    position: relative !important;
+    inset: auto !important;
+    flex-shrink: 0;
+    width: 100% !important;
+    opacity: 1 !important;
+    transition: none !important;
+  }
+  /* モノクロ → カラーアップ */
+  .slide img { filter: grayscale(100%); }
+  .slide.active img { animation: fvColorInSP 2.7s ease forwards; }
+  @keyframes fvColorInSP {
+    0%,10% { filter: grayscale(100%); }
+    100%   { filter: grayscale(0%); }
+  }
+
+  /* ── ABOUT ───────────────────────────────────────────── */
+  #about {
+    padding-top: 40px !important;
+    padding-bottom: 48px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    min-height: auto !important;
+    display: block;
+  }
+  .about__inner {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0;
+    display: flex;
+  }
+  /* 画像を先に・テキストを後に */
+  .about__images {
+    flex: none !important;
+    width: 100% !important;
+    height: 330px !important;
+    position: relative !important;
+    order: 0;
+    margin-bottom: 24px;
+  }
+  .aimg { position: absolute; overflow: hidden; }
+  .aimg--1 { left: 0;   top: 0;    width: 46%; height: 190px; }
+  .aimg--2 { left: 50%; top: 30px; width: 50%; height: 140px; }
+  .aimg--3 { left: 20%; top: 170px; width: 56%; height: 140px; }
+  .about__text {
+    padding-top: 0;
+    position: static;
+    order: 1;
+    flex: none;
+  }
+  .about__label {
+    position: static;
+    margin-bottom: 16px;
+    top: auto; left: auto;
+  }
+  .about__heading { white-space: normal; font-size: clamp(18px,5vw,26px); }
+  /* About 画像カラーアップ（JS で .color-in を付与） */
+  .aimg img { filter: grayscale(100%); transition: filter 1.8s ease, transform .7s; }
+  .aimg img.color-in { filter: grayscale(0%); }
+
+  /* ── ROOMS ───────────────────────────────────────────── */
+  #rooms { padding-top: 48px; padding-bottom: 48px; min-height: auto; }
+  .rooms__grid { grid-template-columns: 1fr; gap: 40px; }
+  .sec-heading { white-space: normal; }
+
+  /* ── AREA ────────────────────────────────────────────── */
+  #area { padding-top: 48px; padding-bottom: 48px; }
+  .area__spot--sakura,
+  .area__spot--jizo,
+  .area__spot--sugamo,
+  .area__spot--bunkaz { width: 24%; }
+  .area__spot--hotel { width: 30%; }
+  .spot__name { font-size: 8px; }
+  .spot__desc { display: none; }
+
+  /* ── AMENITIES ───────────────────────────────────────── */
+  #amenities { padding-top: 48px; padding-bottom: 48px; }
+  .amenity__grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .amenity__list__cats { grid-template-columns: 1fr; }
+
+  /* ── ACCESS ──────────────────────────────────────────── */
+  #access { padding-top: 48px; padding-bottom: 48px; }
+  .access__inner { grid-template-columns: 1fr; gap: 32px; }
+  .access__map iframe { height: 280px; }
+
+  /* ── FOOTER ──────────────────────────────────────────── */
+  .site-footer {
+    flex-direction: column; align-items: flex-start;
+    padding: 32px 24px; gap: 16px;
+  }
+  .site-footer__nav { flex-wrap: wrap; gap: 12px 16px; }
+
+  /* ── 客室詳細ページ ──────────────────────────────────── */
+  .room-page { padding-left: 0 !important; }
+
+  .room-hero { aspect-ratio: 4/3; }
+
+  .room-page-header {
+    padding: 20px 20px;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  /* TYPE表示位置をTYPE-2に揃える */
+  .room-page-header__eyebrow {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .room-page-header__name {
+    font-size: clamp(18px,5vw,26px);
+  }
+  .room-page-header__back { display: none; }
+
+  /* シーン：SP時は左右配置・画像正方形寄り */
+  .room-scene {
+    grid-template-columns: 3fr 2fr;
+    min-height: auto;
+    direction: ltr !important;
+  }
+  .room-scene:nth-child(even) {
+    grid-template-columns: 2fr 3fr;
+    direction: ltr !important;
+  }
+  .room-scene:nth-child(even) > * { direction: ltr !important; }
+  .room-scene__img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    min-height: auto;
+    order: 0;
+  }
+  .room-scene:nth-child(even) .room-scene__img { order: 1; }
+  .room-scene:nth-child(even) .room-scene__space { order: 0; }
+  .room-scene__space {
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+  }
+  .room-scene__text { max-width: 100%; }
+  .room-scene__label { margin-bottom: 6px; font-size: 9px; }
+  .room-scene__title { font-size: clamp(13px,3.5vw,18px); margin-bottom: 6px; }
+  .room-scene__copy { display: block; font-size: clamp(10px,2.5vw,12px); line-height: 1.7; }
+
+  .room-detail { padding: 40px 20px; }
+  .room-detail__row { grid-template-columns: 110px 1fr; }
+  .room-reserve { padding: 28px 20px; }
+
+  /* ── legal ───────────────────────────────────────────── */
+  .legal-wrap { padding: 80px 24px 48px; }
+  .legal-table th { width: auto; white-space: normal; }
+  .legal-footer { align-items: center; }
+  .legal-footer__nav { flex-wrap: wrap; justify-content: center; gap: 12px; }
+
+}

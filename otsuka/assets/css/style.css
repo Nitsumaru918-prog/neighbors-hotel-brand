@@ -1,0 +1,1122 @@
+/* ============================================================
+   NEIGHBORS HOTEL TOKYO OTSUKA — style.css
+   ベースカラー: #f5efe6 / テキスト: #3a2510 / アクセント: #865b39
+   フォント(英): Libre Baskerville / フォント(日): Noto Serif JP
+   ============================================================ */
+
+/* ── リセット・ベース ──────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:      #f5efe6;
+  --text:    #3a2510;
+  --accent:  #865b39;
+  --en:      'Libre Baskerville', serif;
+  --ja:      'Noto Serif JP', serif;
+  --sw:      clamp(160px, 15vw, 220px);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--ja);
+  font-weight: 300;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; width: 100%; height: 100%; object-fit: cover; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+
+/* ── サイドバー ────────────────────────────────────────────── */
+.side {
+  position: fixed;
+  top: 0; left: 0;
+  width: var(--sw);
+  height: 100svh;
+  background: var(--bg);
+  border-right: 1px solid rgba(134,91,57,.12);
+  display: flex;
+  flex-direction: column;
+  padding: clamp(24px,3vh,40px) clamp(20px,2vw,32px);
+  z-index: 100;
+  overflow-y: auto;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .4s ease;
+}
+.side.side--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.side-logo { margin-bottom: clamp(32px,4vh,52px); }
+.side-logo img { width: clamp(80px,10vw,120px); height: auto; object-fit: contain; }
+
+.side-nav { display: flex; flex-direction: column; gap: 4px; }
+.side-nav li a {
+  font-family: var(--en);
+  font-size: clamp(10px,.9vw,13px);
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  opacity: .55;
+  padding: 6px 0;
+  transition: opacity .3s;
+  display: block;
+}
+.side-nav li a:hover { opacity: 1; }
+
+.side-lang { margin-top: auto; padding-top: clamp(24px,3vh,40px); }
+.side-lang__label {
+  font-family: var(--en);
+  font-size: clamp(9px,.75vw,11px);
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  opacity: .4;
+  margin-bottom: 10px;
+}
+.side-lang__list { display: flex; flex-direction: column; gap: 4px; }
+.side-lang__list li a {
+  font-family: var(--en);
+  font-size: clamp(9px,.8vw,11px);
+  letter-spacing: .1em;
+  opacity: .5;
+  transition: opacity .3s;
+}
+.side-lang__list li a:hover { opacity: 1; }
+
+.side-reserve { margin-top: clamp(20px,2.5vh,32px); }
+.side-reserve__btn {
+  display: block;
+  font-family: var(--en);
+  font-size: clamp(9px,.8vw,11px);
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  border: 1px solid var(--accent);
+  padding: 10px 14px;
+  text-align: center;
+  color: var(--accent);
+  transition: background .3s, color .3s;
+}
+.side-reserve__btn:hover {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+/* ── SP Header ─────────────────────────────────────────────── */
+.sp-header {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 56px;
+  background: var(--bg);
+  border-bottom: 1px solid rgba(134,91,57,.12);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  z-index: 200;
+}
+.sp-header__logo img { width: 80px; height: auto; object-fit: contain; }
+
+.sp-burger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 28px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+}
+.sp-burger span {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: var(--text);
+  transition: transform .3s, opacity .3s;
+  transform-origin: center;
+}
+.sp-burger.open span:nth-child(1) { transform: translateY(9.5px) rotate(45deg); }
+.sp-burger.open span:nth-child(2) { opacity: 0; }
+.sp-burger.open span:nth-child(3) { transform: translateY(-9.5px) rotate(-45deg); }
+
+/* ── SP Drawer ─────────────────────────────────────────────── */
+.sp-drawer {
+  display: none;
+  position: fixed;
+  top: 56px; left: 0; right: 0; bottom: 0;
+  background: var(--bg);
+  flex-direction: column;
+  padding: 32px 24px;
+  z-index: 199;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform .3s ease;
+}
+.sp-drawer.open { transform: translateX(0); }
+
+.sp-drawer__nav { display: flex; flex-direction: column; gap: 0; }
+.sp-drawer__nav li a {
+  font-family: var(--en);
+  font-size: 14px;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  opacity: .7;
+  display: block;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(134,91,57,.1);
+}
+
+.sp-drawer__lang-label {
+  font-family: var(--en);
+  font-size: 10px;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  opacity: .4;
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+.sp-drawer__lang { display: flex; flex-wrap: wrap; gap: 8px 16px; }
+.sp-drawer__lang li a {
+  font-family: var(--en);
+  font-size: 12px;
+  letter-spacing: .1em;
+  opacity: .6;
+}
+
+.sp-drawer__reserve { margin-top: 32px; }
+.sp-drawer__reserve-btn {
+  display: block;
+  font-family: var(--en);
+  font-size: 12px;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  border: 1px solid var(--accent);
+  padding: 14px 20px;
+  text-align: center;
+  color: var(--accent);
+}
+
+/* ── メインコンテンツ余白（サイドバー分 + 10px gap） ─────────── */
+#about, #rooms, #area, #amenities, #access,
+.site-footer {
+  padding-left: calc(var(--sw) + 10px);
+}
+
+/* ── FV ────────────────────────────────────────────────────── */
+.fv {
+  height: 100svh;
+  min-height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: minmax(0, 1fr);
+  overflow: hidden;
+}
+
+/* 左: ロゴ・タイトルパネル */
+.fv__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 clamp(4vw, 6vw, 8vw);
+  background: var(--bg);
+  position: relative;
+  z-index: 2;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.fv__logo a { display: block; }
+.fv__logo img {
+  width: clamp(14vw, 18vw, 24vw);
+  height: auto;
+  object-fit: contain;
+}
+.fv__subtitle {
+  font-family: var(--en);
+  font-size: clamp(9px,.75vw,11px);
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  opacity: .45;
+  margin-top: clamp(1vh, 1.5vh, 2vh);
+}
+
+.fv__location {
+  font-family: var(--en);
+  font-size: clamp(10px,.85vw,13px);
+  letter-spacing: .4em;
+  text-transform: uppercase;
+  opacity: .5;
+  margin-top: clamp(2vh, 3vh, 4vh);
+  margin-bottom: 0;
+}
+
+.fv__slide-ui {
+  position: absolute;
+  bottom: clamp(3vh, 4.5vh, 6vh);
+  left: clamp(4vw, 6vw, 8vw);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.slide-dots {
+  display: flex;
+  gap: 8px;
+}
+.slide-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  border: 1px solid rgba(58,37,16,.3);
+  background: transparent;
+  cursor: pointer;
+  transition: background .3s, border-color .3s;
+  padding: 0;
+}
+.slide-dot.active {
+  background: var(--text);
+  border-color: var(--text);
+}
+
+.slide-counter {
+  font-family: var(--en);
+  font-size: clamp(9px,.75vw,11px);
+  letter-spacing: .2em;
+  color: rgba(58,37,16,.45);
+}
+.slide-counter span { color: var(--text); }
+
+/* 右: 画像パネル（四辺余白あり・中央配置） */
+.fv__visual {
+  position: relative;
+  padding: clamp(5vh, 8vh, 11vh) clamp(4vw, 7vw, 10vw);
+  min-height: 0;
+  overflow: hidden;
+}
+
+.fv__slides-clip {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.fv__slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.fv__slide {
+  width: 100%;
+  flex-shrink: 0;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.fv__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(100%) blur(.3px) contrast(1.04);
+  transform: scale(1.01);
+}
+
+/* アクティブスライド：一瞬モノクロ → 上から色が流れるアニメーション */
+.fv__slide.active img {
+  animation: fvColorIn 2.7s ease forwards;
+}
+@keyframes fvColorIn {
+  0%, 10%  { filter: grayscale(100%) blur(.3px) contrast(1.04); }
+  100%     { filter: grayscale(0%)   blur(.3px) contrast(1.04); }
+}
+
+/* ── About ──────────────────────────────────────────────────── */
+#about {
+  padding-top: clamp(64px,10vh,100px);
+  padding-bottom: clamp(64px,10vh,100px);
+  padding-right: clamp(40px,5vw,80px);
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+}
+.about__inner {
+  display: flex;
+  gap: clamp(32px,5vw,80px);
+  align-items: center;
+  width: 100%;
+}
+.about__images {
+  flex: 0 0 42%;
+  position: relative;
+  height: 380px;
+}
+.aimg {
+  position: absolute;
+  overflow: hidden;
+}
+.aimg img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.aimg::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 40%;
+  background: linear-gradient(to bottom, rgba(245,239,230,0) 0%, rgba(245,239,230,.85) 100%);
+  pointer-events: none;
+}
+.aimg--1 { width: 60%; height: 62%; top: 0; left: 0; }
+.aimg--2 { width: 52%; height: 50%; top: 28%; right: 0; }
+.aimg--3 { width: 44%; height: 38%; bottom: 0; left: 10%; }
+
+.about__text { flex: 1; }
+.about__eyebrow {
+  font-family: var(--en);
+  font-size: clamp(10px,.85vw,13px);
+  letter-spacing: .4em;
+  text-transform: uppercase;
+  opacity: .45;
+  margin-bottom: 16px;
+}
+.about__heading {
+  font-family: var(--ja);
+  font-size: clamp(20px,2.2vw,34px);
+  font-weight: 400;
+  letter-spacing: .08em;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+.about__body {
+  font-size: clamp(13px,1vw,15px);
+  line-height: 2.1;
+  letter-spacing: .06em;
+  opacity: .75;
+  margin-bottom: 20px;
+}
+.about__opened {
+  font-family: var(--en);
+  font-size: clamp(10px,.85vw,12px);
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  opacity: .45;
+}
+
+/* ── Rooms ──────────────────────────────────────────────────── */
+#rooms {
+  padding-top: clamp(64px,8vh,100px);
+  padding-bottom: clamp(64px,8vh,100px);
+  padding-right: clamp(40px,5vw,80px);
+}
+.section-header {
+  margin-bottom: clamp(32px,4vh,56px);
+}
+.section-eyebrow {
+  font-family: var(--en);
+  font-size: clamp(10px,.85vw,13px);
+  letter-spacing: .4em;
+  text-transform: uppercase;
+  opacity: .45;
+  margin-bottom: 12px;
+}
+.section-heading {
+  font-family: var(--ja);
+  font-size: clamp(22px,2.4vw,38px);
+  font-weight: 400;
+  letter-spacing: .08em;
+  margin-bottom: 10px;
+}
+.section-subheading {
+  font-size: clamp(12px,.9vw,14px);
+  opacity: .65;
+  letter-spacing: .06em;
+}
+
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(20px,2.5vw,40px);
+}
+
+.room-card {
+  display: block;
+  cursor: pointer;
+}
+.room-card__img {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  margin-bottom: 16px;
+  position: relative;
+}
+/* PC: モノクロ → ホバーでカラー */
+.room-card__img img {
+  filter: grayscale(100%);
+  transition: filter 1s ease, transform 1.2s ease;
+}
+.room-card:hover .room-card__img img {
+  filter: grayscale(0%);
+  transform: scale(1.03);
+}
+
+.room-card__eyebrow {
+  font-family: var(--en);
+  font-size: clamp(9px,.75vw,11px);
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  opacity: .45;
+  margin-bottom: 6px;
+}
+.room-card__name {
+  font-family: var(--en);
+  font-size: clamp(16px,1.5vw,24px);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+.room-card__detail {
+  font-family: var(--ja);
+  font-size: clamp(11px,.9vw,13px);
+  opacity: .5;
+  letter-spacing: .1em;
+}
+
+/* ── Area ───────────────────────────────────────────────────── */
+#area {
+  padding-top: clamp(60px,8vh,100px);
+  padding-bottom: clamp(60px,8vh,100px);
+  padding-right: clamp(40px,5vw,80px);
+  border-top: 1px solid rgba(134,91,57,.1);
+}
+.area__map {
+  position: relative;
+  width: 100%;
+}
+.area__map__bg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.area__spot {
+  position: absolute;
+  text-align: center;
+  opacity: 0;
+  transform: translate(-50%, -50%) translateY(16px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.area__spot.visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) translateY(0);
+}
+.area__spot img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.area__spot--spot1 img,
+.area__spot--spot2 img,
+.area__spot--spot3 img,
+.area__spot--spot4 img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.spot__name {
+  font-family: var(--ja);
+  font-size: clamp(11px,.9vw,14px);
+  font-weight: 500;
+  letter-spacing: .05em;
+  color: var(--text);
+  margin-top: 8px;
+  line-height: 1.4;
+  -webkit-text-stroke: 0.4px var(--bg);
+  paint-order: stroke fill;
+}
+.spot__desc {
+  font-family: var(--ja);
+  font-size: clamp(9px,.75vw,11px);
+  letter-spacing: .03em;
+  color: var(--text);
+  opacity: .85;
+  margin-top: 4px;
+  line-height: 1.5;
+  -webkit-text-stroke: 0.3px var(--bg);
+  paint-order: stroke fill;
+}
+/* 各スポット位置（bg_area.pngに対する%指定） */
+.area__spot--spot1 { left: 28%; top: 20%; width: 18%; transition-delay: 0s; }
+.area__spot--spot2 { left: 72%; top: 28%; width: 18%; transition-delay: .2s; }
+.area__spot--hotel { left: 50%; top: 50%; width: 22%; transition-delay: .4s; }
+.area__spot--spot3 { left: 22%; top: 73%; width: 18%; transition-delay: .6s; }
+.area__spot--spot4 { left: 73%; top: 72%; width: 18%; transition-delay: .8s; }
+
+/* ── Amenities ──────────────────────────────────────────────── */
+#amenities {
+  padding-top: clamp(64px,8vh,100px);
+  padding-bottom: clamp(64px,8vh,100px);
+  padding-right: clamp(40px,5vw,80px);
+  border-top: 1px solid rgba(134,91,57,.1);
+}
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(12px,1.5vw,24px);
+  margin-bottom: clamp(32px,4vh,52px);
+  padding: 0 5%;
+}
+.amenities-grid__img {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.amenities-grid__img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.amenities-grid__caption {
+  font-family: var(--ja);
+  font-size: clamp(11px,.85vw,13px);
+  letter-spacing: .06em;
+  opacity: .7;
+}
+.amenities-list__label {
+  font-family: var(--en);
+  font-size: clamp(9px,.75vw,11px);
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  opacity: .4;
+  margin-bottom: 16px;
+}
+.amenities-list__cats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(20px,2.5vw,40px);
+}
+.amenities-list__cat-name {
+  font-family: var(--ja);
+  font-size: clamp(11px,.9vw,13px);
+  font-weight: 500;
+  letter-spacing: .08em;
+  opacity: .7;
+  margin-bottom: 4px;
+}
+.amenities-list__items {
+  font-size: clamp(11px,.85vw,13px);
+  opacity: .6;
+  line-height: 1.7;
+  letter-spacing: .04em;
+}
+
+/* ── Access ─────────────────────────────────────────────────── */
+#access {
+  padding-top: clamp(64px,8vh,100px);
+  padding-bottom: clamp(64px,8vh,100px);
+  padding-right: clamp(40px,5vw,80px);
+  border-top: 1px solid rgba(134,91,57,.1);
+}
+.access-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(32px,4vw,64px);
+}
+.access-hotel-name {
+  font-family: var(--en);
+  font-size: clamp(10px,.85vw,13px);
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  opacity: .55;
+  margin-bottom: 24px;
+}
+.access-dl { display: flex; flex-direction: column; gap: 0; }
+.access-row {
+  display: grid;
+  grid-template-columns: 9em 1fr;
+  gap: 0 clamp(16px,2vw,32px);
+  padding: clamp(12px,1.5vh,18px) 0;
+  border-bottom: 1px solid rgba(134,91,57,.1);
+}
+.access-row:first-child { border-top: 1px solid rgba(134,91,57,.1); }
+.access-row dt {
+  font-family: var(--ja);
+  font-size: clamp(11px,.9vw,13px);
+  font-weight: 500;
+  opacity: .65;
+  letter-spacing: .06em;
+  padding-top: 2px;
+}
+.access-row dd {
+  font-size: clamp(11px,.9vw,14px);
+  opacity: .85;
+  line-height: 1.8;
+  letter-spacing: .04em;
+}
+.access-row dd a { text-decoration: underline; text-underline-offset: 3px; }
+.access-note-detail {
+  font-size: clamp(10px,.8vw,12px);
+  opacity: .65;
+  display: block;
+  margin-top: 4px;
+  line-height: 1.7;
+}
+.access-map iframe { width: 100%; height: 360px; border: 0; }
+
+/* ── Footer ─────────────────────────────────────────────────── */
+.site-footer {
+  padding-top: clamp(32px,4vh,48px);
+  padding-bottom: clamp(32px,4vh,48px);
+  padding-right: clamp(40px,5vw,80px);
+  border-top: 1px solid rgba(134,91,57,.12);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.site-footer__nav {
+  display: flex;
+  gap: clamp(16px,2vw,32px);
+  flex-wrap: wrap;
+}
+.site-footer__nav li a {
+  font-family: var(--ja);
+  font-size: clamp(10px,.8vw,12px);
+  opacity: .55;
+  letter-spacing: .06em;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.site-footer__nav li a:hover { opacity: 1; }
+.site-footer__copy {
+  font-family: var(--en);
+  font-size: clamp(9px,.75vw,11px);
+  letter-spacing: .1em;
+  opacity: .4;
+}
+
+/* ── Legal Page ─────────────────────────────────────────────── */
+.legal-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: clamp(40px,6vw,80px) clamp(20px,4vw,48px);
+}
+.legal-page__title {
+  font-family: var(--ja);
+  font-size: clamp(18px,2vw,28px);
+  font-weight: 400;
+  letter-spacing: .06em;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(134,91,57,.2);
+}
+.legal-dl { display: flex; flex-direction: column; gap: 0; }
+.legal-row {
+  display: grid;
+  grid-template-columns: 12em 1fr;
+  gap: 0 clamp(16px,2vw,32px);
+  padding: clamp(12px,1.5vh,18px) 0;
+  border-bottom: 1px solid rgba(134,91,57,.1);
+}
+.legal-row:first-child { border-top: 1px solid rgba(134,91,57,.1); }
+.legal-row dt {
+  font-family: var(--ja);
+  font-size: clamp(11px,.9vw,13px);
+  font-weight: 500;
+  opacity: .65;
+  letter-spacing: .06em;
+  padding-top: 2px;
+}
+.legal-row dd {
+  font-size: clamp(11px,.9vw,14px);
+  opacity: .85;
+  line-height: 1.8;
+  letter-spacing: .04em;
+}
+.legal-row dd a { text-decoration: underline; text-underline-offset: 3px; }
+
+/* ── 客室詳細ページ ─────────────────────────────────────────── */
+.room-page { padding-left: calc(var(--sw) + 10px); }
+
+.room-hero {
+  width: 100%;
+  aspect-ratio: 3/2;
+  overflow: hidden;
+}
+
+.room-page-header {
+  padding: clamp(32px,4vh,56px) clamp(40px,5vw,80px);
+  display: flex;
+  align-items: baseline;
+  gap: clamp(14px,1.5vw,28px);
+}
+.room-page-header__eyebrow {
+  font-family: var(--en);
+  font-size: clamp(10px,.85vw,13px);
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  opacity: .45;
+}
+.room-page-header__name {
+  font-family: var(--en);
+  font-size: clamp(20px,2vw,32px);
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.room-page-header__back {
+  margin-left: auto;
+  font-family: var(--en);
+  font-size: clamp(9px,.75vw,11px);
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--text);
+  text-decoration: none;
+  opacity: .4;
+  transition: opacity .3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.room-page-header__back::before { content: "←"; }
+.room-page-header__back:hover { opacity: 1; }
+
+.room-scenes { display: flex; flex-direction: column; }
+.room-scene {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 60vh;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .9s ease, transform .9s ease;
+}
+.room-scene.visible { opacity: 1; transform: translateY(0); }
+.room-scene:nth-child(odd)  { direction: ltr; }
+.room-scene:nth-child(even) { direction: rtl; }
+.room-scene:nth-child(even) > * { direction: ltr; }
+
+.room-scene__img { overflow: hidden; }
+/* PC: モノクロ → ホバーでカラー */
+.room-scene__img img {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: grayscale(60%);
+  transition: filter 1s ease, transform 1.2s ease;
+}
+.room-scene:hover .room-scene__img img {
+  filter: grayscale(0%);
+  transform: scale(1.04);
+}
+.room-scene__space {
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(40px,5vw,80px);
+}
+.room-scene__text { max-width: 340px; }
+.room-scene__label {
+  font-family: var(--en);
+  font-size: clamp(10px,.85vw,12px);
+  font-weight: 600;
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  opacity: .55;
+  margin-bottom: 12px;
+}
+.room-scene__title {
+  font-family: var(--ja);
+  font-size: clamp(18px,1.6vw,26px);
+  font-weight: 400;
+  letter-spacing: .08em;
+  margin-bottom: clamp(14px,1.8vh,22px);
+  line-height: 1.6;
+}
+.room-scene__copy {
+  font-family: var(--ja);
+  font-size: clamp(13px,1vw,15px);
+  line-height: 2.1;
+  letter-spacing: .06em;
+  opacity: .75;
+}
+
+.room-detail {
+  padding: clamp(48px,6vh,80px) clamp(40px,5vw,80px);
+  border-top: 1px solid rgba(134,91,57,.12);
+}
+.room-detail__eyebrow {
+  font-family: var(--en);
+  font-size: clamp(10px,.85vw,12px);
+  font-weight: 600;
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  opacity: .55;
+  margin-bottom: clamp(24px,3vh,40px);
+}
+.room-detail__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  max-width: 600px;
+}
+.room-detail__row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 0 clamp(20px,2.5vw,40px);
+  padding: clamp(14px,1.8vh,20px) 0;
+  border-bottom: 1px solid rgba(134,91,57,.1);
+}
+.room-detail__row:first-child { border-top: 1px solid rgba(134,91,57,.1); }
+.room-detail__label {
+  font-family: var(--ja);
+  font-size: clamp(12px,.95vw,14px);
+  font-weight: 500;
+  opacity: .7;
+  letter-spacing: .06em;
+  padding-top: 2px;
+}
+.room-detail__value {
+  font-size: clamp(12px,.95vw,14px);
+  opacity: .85;
+  line-height: 1.8;
+}
+
+.room-reserve {
+  padding: clamp(40px,5vh,64px) clamp(40px,5vw,80px);
+  border-top: 1px solid rgba(134,91,57,.1);
+}
+.room-reserve__btn {
+  display: inline-block;
+  font-family: var(--en);
+  font-size: clamp(11px,.9vw,13px);
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  border: 1px solid var(--accent);
+  padding: 14px 28px;
+  color: var(--accent);
+  transition: background .3s, color .3s;
+}
+.room-reserve__btn:hover { background: var(--accent); color: var(--bg); }
+
+/* ── フェードイン共通 ───────────────────────────────────────── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .8s ease, transform .8s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================================
+   SP対応 ( max-width: 768px )
+   ============================================================ */
+@media (max-width: 768px) {
+
+  /* サイドバー非表示 */
+  .side { display: none !important; }
+
+  /* SPヘッダー・ドロワー表示 */
+  .sp-header { display: flex; }
+  .sp-drawer { display: flex; }
+
+  /* SP時のpadding-leftリセット（サイドバー分） */
+  #about, #rooms, #area, #amenities, #access,
+  .site-footer {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+  .room-page { padding-left: 0 !important; }
+
+  /* SPトップに56pxのpaddingTop（ヘッダー分） */
+  body { padding-top: 56px; }
+
+  /* ── FV (SP) ── */
+  .fv {
+    grid-template-columns: 1fr !important;
+    height: auto !important;
+    min-height: auto !important;
+  }
+  .fv__info {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 16px 20px !important;
+  }
+  .fv__logo img { width: 72px !important; }
+  .fv__subtitle { margin-top: 6px !important; font-size: 9px; }
+  .fv__location { display: none !important; }
+  .fv__slide-ui {
+    position: static !important;
+    gap: 10px;
+  }
+
+  .fv__visual {
+    padding: 0 16px 16px !important;
+    height: 65vw;
+    min-height: 220px;
+  }
+
+  .fv__slides {
+    cursor: grab;
+    height: 100%;
+    touch-action: pan-y; /* 横スワイプをJSに委譲、縦スクロールはブラウザが担当 */
+  }
+  .fv__slides.is-dragging { cursor: grabbing; }
+
+  /* SP: FVスライド - blur・scaleなし、SP専用カラーアップ */
+  .fv__slide img {
+    filter: grayscale(100%);
+    transform: none;
+  }
+  .fv__slide.active img {
+    animation: fvColorInSP 2.7s ease forwards;
+  }
+  @keyframes fvColorInSP {
+    0%, 10%  { filter: grayscale(100%); }
+    100%     { filter: grayscale(0%); }
+  }
+
+  /* ── SP ヘッダーロゴ: FVロゴが消えたら表示 ── */
+  .sp-header__logo {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+  }
+  .sp-header__logo.logo--visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* ── About (SP) ── */
+  #about {
+    padding-top: 40px !important;
+    padding-bottom: 48px !important;
+    min-height: auto !important;
+  }
+  .about__inner {
+    flex-direction: column;
+    gap: 28px;
+  }
+  .about__images {
+    flex: none !important;
+    width: 100% !important;
+    height: 280px !important;
+  }
+  .aimg--1 { width: 62%; height: 60%; top: 0; left: 0; }
+  .aimg--2 { width: 54%; height: 50%; top: 26%; right: 0; }
+  .aimg--3 { width: 46%; height: 38%; bottom: 0; left: 8%; }
+  .about__text { order: -1; }
+  /* About画像: 70%表示でカラーアップ */
+  .aimg img {
+    filter: grayscale(100%);
+    transition: filter 1.8s ease;
+  }
+  .aimg img.color-in { filter: grayscale(0%); }
+
+  /* ── Rooms (SP) ── */
+  #rooms {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+    border-top: 1px solid rgba(134,91,57,.25) !important;
+  }
+  .rooms-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px;
+  }
+  /* SP: 客室カード画像は常にカラー */
+  .room-card__img img {
+    filter: grayscale(0%) !important;
+  }
+
+  /* ── Area (SP) ── */
+  #area {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+    border-top: 1px solid rgba(134,91,57,.25) !important;
+  }
+  .area__spot--spot1,
+  .area__spot--spot2,
+  .area__spot--spot3,
+  .area__spot--spot4 { width: 24%; }
+  .area__spot--hotel { width: 28%; }
+  .spot__name { font-size: 8px; }
+  .spot__desc { display: none; }
+
+  /* ── Amenities (SP) ── */
+  #amenities {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+  .amenities-grid { grid-template-columns: repeat(2, 1fr) !important; }
+  .amenities-list__cats { grid-template-columns: 1fr !important; }
+
+  /* ── Access (SP) ── */
+  #access {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+  .access-inner { grid-template-columns: 1fr !important; gap: 28px; }
+  .access-row { grid-template-columns: 7em 1fr; }
+  .access-map iframe { height: 260px; }
+
+  /* ── Footer (SP) ── */
+  .site-footer {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px;
+  }
+  .site-footer__nav { gap: 12px; }
+
+  /* ── 客室詳細 (SP) ── */
+  .room-hero { aspect-ratio: 4/3; }
+
+  .room-page-header {
+    padding: 20px !important;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .room-page-header__back { margin-left: 0; }
+
+  /* SP: 客室シーン — 左右交互（上池袋準拠） */
+  .room-scene {
+    grid-template-columns: 3fr 2fr;
+    min-height: auto;
+    direction: ltr !important;
+  }
+  .room-scene:nth-child(even) {
+    grid-template-columns: 2fr 3fr;
+    direction: ltr !important;
+  }
+  .room-scene:nth-child(even) > * { direction: ltr !important; }
+  .room-scene__img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    min-height: auto;
+    order: 0;
+  }
+  .room-scene:nth-child(even) .room-scene__img { order: 1; }
+  .room-scene:nth-child(even) .room-scene__space { order: 0; }
+  .room-scene__space {
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+  }
+  .room-scene__text { max-width: 100%; }
+  .room-scene__label { margin-bottom: 6px; font-size: 9px; }
+  .room-scene__title { font-size: clamp(13px,3.5vw,18px); margin-bottom: 6px; }
+  .room-scene__copy { display: block; font-size: clamp(10px,2.5vw,12px); line-height: 1.7; }
+  .room-scene__img img { filter: grayscale(0%) !important; }
+
+  .room-detail { padding: 40px 20px; }
+  .room-detail__row { grid-template-columns: 110px 1fr; }
+  .room-reserve { padding: 28px 20px !important; }
+  .room-reserve__btn { display: block; text-align: center; }
+
+  /* ── Legal (SP) ── */
+  .legal-page { padding: 32px 20px; }
+  .legal-row { grid-template-columns: 8em 1fr; }
+}
