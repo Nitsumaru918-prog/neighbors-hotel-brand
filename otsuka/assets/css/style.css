@@ -1488,11 +1488,58 @@ a.area__spot { cursor: pointer; text-decoration: none; color: inherit; }
   .areapage[data-tab="map"] .areapage__list {
     display: none !important;
   }
+  .areapage[data-tab="map"] {
+    padding-right: 0 !important;
+  }
+  .areapage[data-tab="map"] .areapage__content {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100%;
+  }
   .areapage[data-tab="map"] .areapage__map-wrap {
-    display: block !important;
+    display: flex !important;
+    flex-direction: column !important;
     height: calc(100svh - 160px) !important;
+    width: 100% !important;
     position: relative !important;
     top: auto !important;
     order: 0 !important;
+    overflow: hidden;
+  }
+  .areapage[data-tab="map"] #areamap {
+    flex: 1;
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Spot info bar (map view) */
+  .areapage[data-tab="map"] .spot-info-bar.is-active {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: var(--bg);
+    border-bottom: 1px solid rgba(134,91,57,.1);
+    flex-shrink: 0;
+  }
+  .spot-info-bar__num {
+    font-family: var(--en);
+    font-size: 11px;
+    letter-spacing: .1em;
+    color: var(--accent);
+    opacity: .8;
+  }
+  .spot-info-bar__sep { color: rgba(134,91,57,.3); font-size: 11px; }
+  .spot-info-bar__name {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+  }
+  .spot-info-bar__time {
+    font-size: 11px;
+    color: rgba(58,37,16,.5);
+    margin-left: auto;
   }
 }
+
+.spot-info-bar { display: none; }
