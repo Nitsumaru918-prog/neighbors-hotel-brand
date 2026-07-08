@@ -215,7 +215,10 @@
         </div>
         <p class="spot-info-bar__summary" id="spotInfoSummary"></p>
         <div class="spot-info-bar__route" id="spotInfoRoute"></div>
-        <a class="spot-info-bar__official" id="spotInfoOfficial" target="_blank" rel="noopener"></a>
+        <div class="spot-info-bar__links">
+          <a class="spot-info-bar__official" id="spotInfoOfficial" target="_blank" rel="noopener"></a>
+          <a class="spot-info-bar__map-link" id="spotInfoMapLink" target="_blank" rel="noopener"></a>
+        </div>
       </div>
       <iframe id="areamap" src="https://maps.google.com/maps?q=35.7300684,139.7266689&amp;z=14&amp;output=embed&amp;hl=en" style="width:100%;height:100%;border:0;display:block" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
@@ -286,6 +289,12 @@
     if (offEl) {
       if (offLink) { offEl.href = offLink.href; offEl.textContent = offLink.textContent.trim(); offEl.style.display = ''; }
       else { offEl.style.display = 'none'; }
+    }
+    var mapLink = el.querySelector('.spot-card__link--map');
+    var mapEl = document.getElementById('spotInfoMapLink');
+    if (mapEl) {
+      if (mapLink) { mapEl.href = mapLink.href; mapEl.textContent = mapLink.textContent.trim(); mapEl.style.display = ''; }
+      else { mapEl.style.display = 'none'; }
     }
     bar.classList.add('is-active');
   }
