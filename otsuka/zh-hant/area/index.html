@@ -243,23 +243,47 @@
   var HOTEL_LAT = 35.7300684, HOTEL_LNG = 139.7266689;
   var cards = document.querySelectorAll('.spot-card');
 
-  var map = L.map('areamap', { center: [HOTEL_LAT, HOTEL_LNG], zoom: 15, scrollWheelZoom: false });
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'
-  }).addTo(map);
+  // ── Leaflet (lazy init on SP, eager on PC) ───────────────────
+  var map, spotMarker;
+  var mapReady   = false;
+  var pendingPos = null;
 
-  var hotelIcon = L.divIcon({ className: 'lmap-pin lmap-pin--hotel', iconSize: [30, 30], iconAnchor: [15, 15] });
-  L.marker([HOTEL_LAT, HOTEL_LNG], { icon: hotelIcon, zIndexOffset: 100 }).addTo(map);
-  var spotIcon  = L.divIcon({ className: 'lmap-pin lmap-pin--spot',  iconSize: [28, 36], iconAnchor: [14, 36] });
-  var spotMarker = null;
+  var spotIcon = L.divIcon({ className: 'lmap-pin lmap-pin--spot', iconSize: [28, 36], iconAnchor: [14, 36] });
 
-  function updateMap(lat, lng) {
+  function initMap() {
+    if (mapReady) return;
+    mapReady = true;
+    map = L.map('areamap', { center: [HOTEL_LAT, HOTEL_LNG], zoom: 15, scrollWheelZoom: false });
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      detectRetina: true,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'
+    }).addTo(map);
+    L.marker([HOTEL_LAT, HOTEL_LNG], {
+      icon: L.divIcon({ className: 'lmap-pin lmap-pin--hotel', iconSize: [30, 30], iconAnchor: [15, 15] }),
+      zIndexOffset: 100
+    }).addTo(map);
+    if (pendingPos) {
+      _doPlaceSpot(pendingPos.lat, pendingPos.lng);
+      pendingPos = null;
+    }
+  }
+
+  function _doPlaceSpot(lat, lng) {
     if (spotMarker) { map.removeLayer(spotMarker); }
     spotMarker = L.marker([lat, lng], { icon: spotIcon }).addTo(map);
     map.fitBounds([[HOTEL_LAT, HOTEL_LNG], [lat, lng]], { padding: [50, 50], maxZoom: 15 });
   }
 
+  function updateMap(lat, lng) {
+    if (!mapReady) { pendingPos = { lat: lat, lng: lng }; return; }
+    _doPlaceSpot(lat, lng);
+  }
+
+  // PC: always init immediately (map always visible)
+  if (window.innerWidth > 768) { initMap(); }
+
+  // ── Spot card activate ───────────────────────────────────────
   function activate(id) {
     cards.forEach(function (c) { c.classList.remove('spot-card--active'); });
     var el = document.getElementById('spot-' + id);
@@ -267,6 +291,7 @@
     return el;
   }
 
+  // ── Tab system ───────────────────────────────────────────────
   var areaEl = document.querySelector('.areapage');
   var tabs   = document.querySelectorAll('.area-tab');
   if (areaEl) areaEl.setAttribute('data-tab', 'list');
@@ -275,10 +300,14 @@
       tabs.forEach(function(u) { u.classList.remove('area-tab--active'); });
       t.classList.add('area-tab--active');
       if (areaEl) areaEl.setAttribute('data-tab', t.dataset.tab);
-      if (t.dataset.tab === 'map') { setTimeout(function() { map.invalidateSize(); }, 50); }
+      if (t.dataset.tab === 'map') {
+        initMap();
+        setTimeout(function() { if (mapReady) map.invalidateSize(); }, 50);
+      }
     });
   });
 
+  // ── Info bar ─────────────────────────────────────────────────
   function updateInfoBar(el) {
     var bar = document.getElementById('spotInfoBar');
     if (!bar || !el) return;
@@ -323,10 +352,12 @@
     var mapTab = document.querySelector('.area-tab[data-tab="map"]');
     if (mapTab) mapTab.classList.add('area-tab--active');
     if (areaEl) areaEl.setAttribute('data-tab', 'map');
-    setTimeout(function() { map.invalidateSize(); }, 50);
+    initMap();
+    setTimeout(function() { if (mapReady) map.invalidateSize(); }, 50);
     if (activeEl) updateInfoBar(activeEl);
   }
 
+  // ── Card clicks ──────────────────────────────────────────────
   cards.forEach(function (card) {
     card.addEventListener('click', function () {
       var id = card.id.replace('spot-', '');
@@ -336,6 +367,7 @@
     });
   });
 
+  // ── ?spot= URL param ─────────────────────────────────────────
   var param = parseInt(new URLSearchParams(location.search).get('spot'));
   if (param) {
     var el = activate(param);
@@ -346,6 +378,7 @@
     }
   }
 
+  // ── Burger menu ──────────────────────────────────────────────
   (function () {
     var burger = document.getElementById('spBurger');
     var drawer = document.getElementById('spDrawer');
