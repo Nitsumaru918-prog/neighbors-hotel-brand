@@ -90,6 +90,11 @@
     <p class="areapage__sub">도보로 이동 가능한 가까운 스팟부터, 전철로 편리하게 갈 수 있는 관광지까지.</p>
   </div>
 
+  <div class="area-tabs" id="areaTabs" role="tablist">
+    <button class="area-tab area-tab--active" data-tab="list" role="tab">목록</button>
+    <button class="area-tab" data-tab="map" role="tab">지도</button>
+  </div>
+
   <div class="areapage__content">
 
     <!-- Spot List -->
@@ -232,11 +237,29 @@
     return el;
   }
 
+  var areaEl = document.querySelector('.areapage');
+  var tabs   = document.querySelectorAll('.area-tab');
+  if (areaEl) areaEl.setAttribute('data-tab', 'list');
+  tabs.forEach(function(t) {
+    t.addEventListener('click', function() {
+      tabs.forEach(function(u) { u.classList.remove('area-tab--active'); });
+      t.classList.add('area-tab--active');
+      if (areaEl) areaEl.setAttribute('data-tab', t.dataset.tab);
+    });
+  });
+  function switchToMap() {
+    tabs.forEach(function(t) { t.classList.remove('area-tab--active'); });
+    var mapTab = document.querySelector('.area-tab[data-tab="map"]');
+    if (mapTab) mapTab.classList.add('area-tab--active');
+    if (areaEl) areaEl.setAttribute('data-tab', 'map');
+  }
+
   cards.forEach(function (card) {
     card.addEventListener('click', function () {
       var id = card.id.replace('spot-', '');
       activate(id);
       frame.src = BASE + card.dataset.lat + ',' + card.dataset.lng + '&z=16&output=embed&' + HL;
+      if (window.innerWidth <= 768) { switchToMap(); }
     });
   });
 
@@ -246,6 +269,7 @@
     if (el) {
       frame.src = BASE + el.dataset.lat + ',' + el.dataset.lng + '&z=16&output=embed&' + HL;
       setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }, 300);
+      if (window.innerWidth <= 768) { switchToMap(); }
     }
   }
 

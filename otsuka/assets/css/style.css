@@ -1428,3 +1428,71 @@ ul, ol { list-style: none; }
 .area-cta__link:hover { opacity: 1; }
 .area__spot { cursor: default; }
 a.area__spot { cursor: pointer; text-decoration: none; color: inherit; }
+
+/* ============================================================
+   Area Detail Page – SP Tab System
+   ============================================================ */
+.area-tabs { display: none; }
+
+.area-tab {
+  flex: 1;
+  height: 44px;
+  font-size: 13.5px;
+  letter-spacing: .06em;
+  color: var(--text);
+  background: none;
+  border: none;
+  border-bottom: 2.5px solid transparent;
+  cursor: pointer;
+  opacity: .5;
+  -webkit-tap-highlight-color: transparent;
+  transition: color .2s, opacity .2s;
+}
+.area-tab--active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  opacity: 1;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .area-tabs {
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: var(--bg);
+    border-bottom: 1px solid rgba(134,91,57,.12);
+  }
+
+  /* Override grid → flex for tab control */
+  .areapage__content {
+    display: flex !important;
+    flex-direction: column !important;
+    grid-template-rows: none !important;
+  }
+
+  /* List tab (default): show list, hide map */
+  .areapage[data-tab="list"] .areapage__map-wrap,
+  .areapage:not([data-tab]) .areapage__map-wrap {
+    display: none !important;
+  }
+  .areapage[data-tab="list"] .areapage__list,
+  .areapage:not([data-tab]) .areapage__list {
+    display: flex !important;
+    order: 0 !important;
+    padding: 0 16px !important;
+  }
+
+  /* Map tab: full-height map, hide list */
+  .areapage[data-tab="map"] .areapage__list {
+    display: none !important;
+  }
+  .areapage[data-tab="map"] .areapage__map-wrap {
+    display: block !important;
+    height: calc(100svh - 160px) !important;
+    position: relative !important;
+    top: auto !important;
+    order: 0 !important;
+  }
+}
