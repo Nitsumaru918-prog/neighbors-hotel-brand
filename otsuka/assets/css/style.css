@@ -1576,3 +1576,38 @@ a.area__spot { cursor: pointer; text-decoration: none; color: inherit; }
 }
 
 .spot-info-bar { display: none; }
+
+/* ── Leaflet custom map pins ── */
+.lmap-pin--hotel {
+  width: 30px;
+  height: 30px;
+  background: #865b39;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,.35);
+  position: relative;
+}
+.lmap-pin--hotel::after {
+  content: 'NEIGHBORS HOTEL';
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #865b39;
+  color: #fff;
+  font-size: 9px;
+  font-family: 'Libre Baskerville', serif;
+  letter-spacing: .06em;
+  padding: 2px 7px;
+  border-radius: 3px;
+  white-space: nowrap;
+  box-shadow: 0 1px 4px rgba(0,0,0,.2);
+}
+.lmap-pin--spot {
+  width: 22px;
+  height: 22px;
+  background: #4a7db5;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,.3);
+}

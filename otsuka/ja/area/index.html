@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/otsuka/assets/css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
   <link rel="canonical" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/area/">
   <link rel="alternate" hreflang="ja"      href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/area/">
   <link rel="alternate" hreflang="en"      href="https://www.neighbors-hotel-tokyo.com/otsuka/en/area/">
@@ -220,7 +221,7 @@
           <a class="spot-info-bar__map-link" id="spotInfoMapLink" target="_blank" rel="noopener"></a>
         </div>
       </div>
-      <iframe id="areamap" src="https://maps.google.com/maps?q=35.7300684,139.7266689&amp;z=14&amp;output=embed&amp;hl=ja" style="width:100%;height:100%;border:0;display:block" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <div id="areamap"></div>
     </div>
 
   </div>
@@ -236,12 +237,28 @@
 </footer>
 
 <script src="/otsuka/assets/js/main.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
 (function () {
-  var HL   = 'hl=ja';
-  var BASE = 'https://maps.google.com/maps?q=';
-  var frame = document.getElementById('areamap');
+  var HOTEL_LAT = 35.7300684, HOTEL_LNG = 139.7266689;
   var cards = document.querySelectorAll('.spot-card');
+
+  var map = L.map('areamap', { center: [HOTEL_LAT, HOTEL_LNG], zoom: 15, scrollWheelZoom: false });
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a>'
+  }).addTo(map);
+
+  var hotelIcon = L.divIcon({ className: 'lmap-pin lmap-pin--hotel', iconSize: [30, 30], iconAnchor: [15, 15] });
+  L.marker([HOTEL_LAT, HOTEL_LNG], { icon: hotelIcon, zIndexOffset: 100 }).addTo(map);
+  var spotIcon  = L.divIcon({ className: 'lmap-pin lmap-pin--spot',  iconSize: [22, 22], iconAnchor: [11, 11] });
+  var spotMarker = null;
+
+  function updateMap(lat, lng) {
+    if (spotMarker) { map.removeLayer(spotMarker); }
+    spotMarker = L.marker([lat, lng], { icon: spotIcon }).addTo(map);
+    map.fitBounds([[HOTEL_LAT, HOTEL_LNG], [lat, lng]], { padding: [50, 50] });
+  }
 
   function activate(id) {
     cards.forEach(function (c) { c.classList.remove('spot-card--active'); });
@@ -258,8 +275,10 @@
       tabs.forEach(function(u) { u.classList.remove('area-tab--active'); });
       t.classList.add('area-tab--active');
       if (areaEl) areaEl.setAttribute('data-tab', t.dataset.tab);
+      if (t.dataset.tab === 'map') { setTimeout(function() { map.invalidateSize(); }, 50); }
     });
   });
+
   function updateInfoBar(el) {
     var bar = document.getElementById('spotInfoBar');
     if (!bar || !el) return;
@@ -280,7 +299,7 @@
       steps.forEach(function(s) {
         var mo = s.querySelector('.route-step__mode');
         var ti = s.querySelector('.route-step__time');
-        if (mo && ti) parts.push(mo.textContent.trim() + ' ' + ti.textContent.trim());
+        if (mo && ti) parts.push(mo.textContent.trim() + ' ' + ti.textContent.trim());
       });
       routeEl.textContent = parts.join(' → ');
     }
@@ -298,11 +317,13 @@
     }
     bar.classList.add('is-active');
   }
+
   function switchToMap(activeEl) {
     tabs.forEach(function(t) { t.classList.remove('area-tab--active'); });
     var mapTab = document.querySelector('.area-tab[data-tab="map"]');
     if (mapTab) mapTab.classList.add('area-tab--active');
     if (areaEl) areaEl.setAttribute('data-tab', 'map');
+    setTimeout(function() { map.invalidateSize(); }, 50);
     if (activeEl) updateInfoBar(activeEl);
   }
 
@@ -310,7 +331,7 @@
     card.addEventListener('click', function () {
       var id = card.id.replace('spot-', '');
       var el = activate(id);
-      frame.src = BASE + card.dataset.lat + ',' + card.dataset.lng + '&z=16&output=embed&' + HL;
+      updateMap(parseFloat(card.dataset.lat), parseFloat(card.dataset.lng));
       if (window.innerWidth <= 768) { switchToMap(el); }
     });
   });
@@ -319,7 +340,7 @@
   if (param) {
     var el = activate(param);
     if (el) {
-      frame.src = BASE + el.dataset.lat + ',' + el.dataset.lng + '&z=16&output=embed&' + HL;
+      updateMap(parseFloat(el.dataset.lat), parseFloat(el.dataset.lng));
       setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); }, 300);
       if (window.innerWidth <= 768) { switchToMap(el); }
     }
