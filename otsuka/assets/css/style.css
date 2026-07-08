@@ -1604,10 +1604,23 @@ a.area__spot { cursor: pointer; text-decoration: none; color: inherit; }
   box-shadow: 0 1px 4px rgba(0,0,0,.2);
 }
 .lmap-pin--spot {
-  width: 22px;
-  height: 22px;
-  background: #4a7db5;
+  position: relative;
+  width: 28px;
+  height: 28px;
+  background: #e05c38;
   border: 3px solid #fff;
   border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0,0,0,.3);
+  box-shadow: 0 2px 8px rgba(0,0,0,.4);
+}
+.lmap-pin--spot::after {
+  content: '';
+  position: absolute;
+  bottom: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 9px solid #e05c38;
 }

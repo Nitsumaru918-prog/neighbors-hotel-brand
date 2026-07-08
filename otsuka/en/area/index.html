@@ -251,13 +251,13 @@
 
   var hotelIcon = L.divIcon({ className: 'lmap-pin lmap-pin--hotel', iconSize: [30, 30], iconAnchor: [15, 15] });
   L.marker([HOTEL_LAT, HOTEL_LNG], { icon: hotelIcon, zIndexOffset: 100 }).addTo(map);
-  var spotIcon  = L.divIcon({ className: 'lmap-pin lmap-pin--spot',  iconSize: [22, 22], iconAnchor: [11, 11] });
+  var spotIcon  = L.divIcon({ className: 'lmap-pin lmap-pin--spot',  iconSize: [28, 36], iconAnchor: [14, 36] });
   var spotMarker = null;
 
   function updateMap(lat, lng) {
     if (spotMarker) { map.removeLayer(spotMarker); }
     spotMarker = L.marker([lat, lng], { icon: spotIcon }).addTo(map);
-    map.fitBounds([[HOTEL_LAT, HOTEL_LNG], [lat, lng]], { padding: [50, 50] });
+    map.fitBounds([[HOTEL_LAT, HOTEL_LNG], [lat, lng]], { padding: [50, 50], maxZoom: 15 });
   }
 
   function activate(id) {
