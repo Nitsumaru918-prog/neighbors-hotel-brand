@@ -117,7 +117,7 @@ ul, ol { list-style: none; }
   align-items: center;
   justify-content: space-between;
   padding: 0 16px;
-  z-index: 200;
+  z-index: 1001;
 }
 .sp-header__logo img { width: 80px; height: auto; object-fit: contain; }
 
@@ -152,7 +152,7 @@ ul, ol { list-style: none; }
   background: var(--bg);
   flex-direction: column;
   padding: 32px 24px;
-  z-index: 199;
+  z-index: 1000;
   overflow-y: auto;
   transform: translateX(100%);
   transition: transform .3s ease;

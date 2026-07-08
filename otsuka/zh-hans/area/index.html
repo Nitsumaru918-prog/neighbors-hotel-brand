@@ -267,6 +267,11 @@
       _doPlaceSpot(pendingPos.lat, pendingPos.lng);
       pendingPos = null;
     }
+    map.on('locationfound', function(e) {
+      L.circle(e.latlng, { radius: e.accuracy, color: '#4285f4', fillColor: '#4285f4', fillOpacity: 0.12, weight: 1 }).addTo(map);
+      L.circleMarker(e.latlng, { radius: 8, color: '#fff', weight: 2.5, fillColor: '#4285f4', fillOpacity: 1 }).addTo(map);
+    });
+    map.locate({ watch: false, enableHighAccuracy: true });
   }
 
   function _doPlaceSpot(lat, lng) {
