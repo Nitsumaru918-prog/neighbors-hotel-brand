@@ -208,10 +208,14 @@
     <!-- Map -->
     <div class="areapage__map-wrap">
       <div class="spot-info-bar" id="spotInfoBar">
-        <span class="spot-info-bar__num" id="spotInfoNum"></span>
-        <span class="spot-info-bar__sep">—</span>
-        <span class="spot-info-bar__name" id="spotInfoName"></span>
-        <span class="spot-info-bar__time" id="spotInfoTime"></span>
+        <div class="spot-info-bar__header">
+          <span class="spot-info-bar__num" id="spotInfoNum"></span>
+          <span class="spot-info-bar__name" id="spotInfoName"></span>
+          <span class="spot-info-bar__time" id="spotInfoTime"></span>
+        </div>
+        <p class="spot-info-bar__summary" id="spotInfoSummary"></p>
+        <div class="spot-info-bar__route" id="spotInfoRoute"></div>
+        <a class="spot-info-bar__official" id="spotInfoOfficial" target="_blank" rel="noopener"></a>
       </div>
       <iframe id="areamap" src="https://maps.google.com/maps?q=35.7300684,139.7266689&amp;z=14&amp;output=embed&amp;hl=en" style="width:100%;height:100%;border:0;display:block" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
@@ -259,6 +263,30 @@
     document.getElementById('spotInfoNum').textContent  = (el.querySelector('.spot-card__num')  || {}).textContent || '';
     document.getElementById('spotInfoName').textContent = (el.querySelector('.spot-card__name') || {}).textContent || '';
     document.getElementById('spotInfoTime').textContent = (el.querySelector('.spot-card__time') || {}).textContent || '';
+    var descEl = el.querySelector('.spot-card__desc');
+    var sm = document.getElementById('spotInfoSummary');
+    if (sm) {
+      var txt = descEl ? (descEl.textContent || '').trim() : '';
+      var m = txt.match(/^[\s\S]+?[。.]/);
+      sm.textContent = m ? m[0] : txt.substring(0, 60);
+    }
+    var routeEl = document.getElementById('spotInfoRoute');
+    if (routeEl) {
+      var steps = el.querySelectorAll('.route-step');
+      var parts = [];
+      steps.forEach(function(s) {
+        var mo = s.querySelector('.route-step__mode');
+        var ti = s.querySelector('.route-step__time');
+        if (mo && ti) parts.push(mo.textContent.trim() + ' ' + ti.textContent.trim());
+      });
+      routeEl.textContent = parts.join(' → ');
+    }
+    var offLink = el.querySelector('.spot-card__link--official');
+    var offEl = document.getElementById('spotInfoOfficial');
+    if (offEl) {
+      if (offLink) { offEl.href = offLink.href; offEl.textContent = offLink.textContent.trim(); offEl.style.display = ''; }
+      else { offEl.style.display = 'none'; }
+    }
     bar.classList.add('is-active');
   }
   function switchToMap(activeEl) {
