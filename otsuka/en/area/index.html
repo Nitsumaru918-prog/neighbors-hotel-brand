@@ -245,8 +245,8 @@
 
   // ── Leaflet (lazy init on SP, eager on PC) ───────────────────
   var map, spotMarker;
-  var mapReady   = false;
-  var pendingPos = null;
+  var mapReady       = false;
+  var currentSpotPos = null;
 
   var spotIcon = L.divIcon({ className: 'lmap-pin lmap-pin--spot', iconSize: [28, 28], iconAnchor: [14, 37] });
 
@@ -263,10 +263,6 @@
       icon: L.divIcon({ className: 'lmap-pin lmap-pin--hotel', iconSize: [30, 30], iconAnchor: [15, 15] }),
       zIndexOffset: 100
     }).addTo(map);
-    if (pendingPos) {
-      _doPlaceSpot(pendingPos.lat, pendingPos.lng);
-      pendingPos = null;
-    }
     map.on('locationfound', function(e) {
       L.circle(e.latlng, { radius: e.accuracy, color: '#4285f4', fillColor: '#4285f4', fillOpacity: 0.12, weight: 1 }).addTo(map);
       L.circleMarker(e.latlng, { radius: 8, color: '#fff', weight: 2.5, fillColor: '#4285f4', fillOpacity: 1 }).addTo(map);
@@ -281,8 +277,18 @@
   }
 
   function updateMap(lat, lng) {
-    if (!mapReady) { pendingPos = { lat: lat, lng: lng }; return; }
-    _doPlaceSpot(lat, lng);
+    currentSpotPos = { lat: lat, lng: lng };
+    if (mapReady) { _doPlaceSpot(lat, lng); }
+  }
+
+  function showMap() {
+    requestAnimationFrame(function() {
+      requestAnimationFrame(function() {
+        initMap();
+        map.invalidateSize();
+        if (currentSpotPos) { _doPlaceSpot(currentSpotPos.lat, currentSpotPos.lng); }
+      });
+    });
   }
 
   // PC: always init immediately (map always visible)
@@ -305,10 +311,7 @@
       tabs.forEach(function(u) { u.classList.remove('area-tab--active'); });
       t.classList.add('area-tab--active');
       if (areaEl) areaEl.setAttribute('data-tab', t.dataset.tab);
-      if (t.dataset.tab === 'map') {
-        initMap();
-        setTimeout(function() { if (mapReady) map.invalidateSize(); }, 50);
-      }
+      if (t.dataset.tab === 'map') { showMap(); }
     });
   });
 
@@ -357,9 +360,8 @@
     var mapTab = document.querySelector('.area-tab[data-tab="map"]');
     if (mapTab) mapTab.classList.add('area-tab--active');
     if (areaEl) areaEl.setAttribute('data-tab', 'map');
-    initMap();
-    setTimeout(function() { if (mapReady) map.invalidateSize(); }, 50);
     if (activeEl) updateInfoBar(activeEl);
+    showMap();
   }
 
   // ── Card clicks ──────────────────────────────────────────────
