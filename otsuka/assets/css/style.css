@@ -1624,3 +1624,50 @@ a.area__spot { cursor: pointer; text-decoration: none; color: inherit; }
   border-right: 7px solid transparent;
   border-top: 9px solid #e05c38;
 }
+
+/* ── Location permission prompt ────────────────────────────── */
+.location-prompt {
+  display: none;
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 800;
+  background: var(--bg);
+  border: 1px solid rgba(134,91,57,.18);
+  border-radius: 8px;
+  padding: 8px 14px;
+  box-shadow: 0 2px 14px rgba(0,0,0,.2);
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+.location-prompt.is-visible { display: flex; }
+.location-prompt__text {
+  font-size: .78rem;
+  color: var(--text);
+  letter-spacing: .03em;
+}
+.location-prompt__btns { display: flex; gap: 7px; }
+.location-prompt__yes {
+  font-size: .72rem;
+  padding: 5px 12px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: .04em;
+  white-space: nowrap;
+}
+.location-prompt__skip {
+  font-size: .72rem;
+  padding: 5px 9px;
+  background: none;
+  border: 1px solid rgba(134,91,57,.28);
+  border-radius: 4px;
+  cursor: pointer;
+  color: var(--text);
+  opacity: .65;
+  white-space: nowrap;
+}

@@ -221,7 +221,15 @@
           <a class="spot-info-bar__map-link" id="spotInfoMapLink" target="_blank" rel="noopener"></a>
         </div>
       </div>
-      <div id="areamap"></div>
+      <div id="areamap">
+        <div id="locationPrompt" class="location-prompt">
+          <span class="location-prompt__text">現在地を地図に表示しますか？</span>
+          <div class="location-prompt__btns">
+            <button id="locationYes" class="location-prompt__yes">表示する</button>
+            <button id="locationSkip" class="location-prompt__skip">スキップ</button>
+          </div>
+        </div>
+      </div>
     </div>
 
   </div>
@@ -241,6 +249,7 @@
 <script>
 (function () {
   var HOTEL_LAT = 35.7300684, HOTEL_LNG = 139.7266689;
+  var LOC_KEY   = 'nbot_loc_pref';
   var cards = document.querySelectorAll('.spot-card');
 
   // ── Leaflet (lazy init on SP, eager on PC) ───────────────────
@@ -267,7 +276,14 @@
       L.circle(e.latlng, { radius: e.accuracy, color: '#4285f4', fillColor: '#4285f4', fillOpacity: 0.12, weight: 1 }).addTo(map);
       L.circleMarker(e.latlng, { radius: 8, color: '#fff', weight: 2.5, fillColor: '#4285f4', fillOpacity: 1 }).addTo(map);
     });
-    map.locate({ watch: false, enableHighAccuracy: true });
+  }
+
+  function initLocationPrompt() {
+    var pref = localStorage.getItem(LOC_KEY);
+    if (pref === 'yes') { map.locate({ watch: false, enableHighAccuracy: true }); return; }
+    if (pref === 'no') return;
+    var el = document.getElementById('locationPrompt');
+    if (el) el.classList.add('is-visible');
   }
 
   function _doPlaceSpot(lat, lng) {
@@ -287,12 +303,13 @@
         initMap();
         map.invalidateSize();
         if (currentSpotPos) { _doPlaceSpot(currentSpotPos.lat, currentSpotPos.lng); }
+        initLocationPrompt();
       });
     });
   }
 
   // PC: always init immediately (map always visible)
-  if (window.innerWidth > 768) { initMap(); }
+  if (window.innerWidth > 768) { initMap(); initLocationPrompt(); }
 
   // ── Spot card activate ───────────────────────────────────────
   function activate(id) {
@@ -384,6 +401,23 @@
       if (window.innerWidth <= 768) { switchToMap(el); }
     }
   }
+
+  // ── Location prompt ──────────────────────────────────────────
+  (function () {
+    var promptEl = document.getElementById('locationPrompt');
+    var yesBtn   = document.getElementById('locationYes');
+    var skipBtn  = document.getElementById('locationSkip');
+    if (!yesBtn || !skipBtn) return;
+    yesBtn.addEventListener('click', function () {
+      localStorage.setItem(LOC_KEY, 'yes');
+      if (promptEl) promptEl.classList.remove('is-visible');
+      if (mapReady) map.locate({ watch: false, enableHighAccuracy: true });
+    });
+    skipBtn.addEventListener('click', function () {
+      localStorage.setItem(LOC_KEY, 'no');
+      if (promptEl) promptEl.classList.remove('is-visible');
+    });
+  }());
 
   // ── Burger menu ──────────────────────────────────────────────
   (function () {
