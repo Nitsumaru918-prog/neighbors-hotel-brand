@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ============================================================
+       NEIGHBORS HOTEL TOKYO — 統合サイトマップ
+       https://www.neighbors-hotel-tokyo.com/
+       最終更新: 2026-07-13
+       ============================================================ -->
+
+  <!-- ── ブランド TOP ─────────────────────────────────────────── -->
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ============================================================
+       OTSUKA (大塚)
+       ============================================================ -->
+
+  <!-- TOP -->
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/otsuka/ja/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/otsuka/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/otsuka/en/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/otsuka/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/otsuka/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/otsuka/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/otsuka/ko/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/otsuka/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Area Guide -->
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/otsuka/ja/area/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/area/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/otsuka/en/area/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/area/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/area/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/area/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/area/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/otsuka/en/area/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/area/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/otsuka/en/area/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/area/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/area/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/area/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/area/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/area/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/area/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/otsuka/en/area/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/area/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/area/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/area/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/area/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/area/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/area/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/otsuka/en/area/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/area/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/area/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/area/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/area/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/otsuka/ko/area/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/area/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/otsuka/en/area/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/area/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/area/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/area/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/area/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Rooms: Type A -->
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-a/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-a/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/otsuka/en/rooms/type-a/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/rooms/type-a/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/rooms/type-a/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/rooms/type-a/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-a/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/otsuka/en/rooms/type-a/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-a/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/otsuka/en/rooms/type-a/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/rooms/type-a/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/rooms/type-a/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/rooms/type-a/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-a/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/rooms/type-a/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-a/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/otsuka/en/rooms/type-a/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/rooms/type-a/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/rooms/type-a/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/rooms/type-a/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-a/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/rooms/type-a/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-a/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/otsuka/en/rooms/type-a/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/rooms/type-a/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/rooms/type-a/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/rooms/type-a/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-a/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/otsuka/ko/rooms/type-a/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-a/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/otsuka/en/rooms/type-a/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/rooms/type-a/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/rooms/type-a/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/rooms/type-a/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-a/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Rooms: Type B -->
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-b/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-b/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/otsuka/en/rooms/type-b/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/rooms/type-b/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/rooms/type-b/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/rooms/type-b/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-b/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/otsuka/en/rooms/type-b/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-b/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/otsuka/en/rooms/type-b/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/rooms/type-b/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/rooms/type-b/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/rooms/type-b/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-b/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/rooms/type-b/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-b/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/otsuka/en/rooms/type-b/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/rooms/type-b/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/rooms/type-b/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/rooms/type-b/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-b/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/rooms/type-b/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-b/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/otsuka/en/rooms/type-b/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/rooms/type-b/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/rooms/type-b/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/rooms/type-b/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-b/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/otsuka/ko/rooms/type-b/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-b/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/otsuka/en/rooms/type-b/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/rooms/type-b/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/rooms/type-b/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/rooms/type-b/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-b/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Rooms: Type C -->
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-c/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-c/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/otsuka/en/rooms/type-c/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/rooms/type-c/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/rooms/type-c/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/rooms/type-c/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-c/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/otsuka/en/rooms/type-c/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-c/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/otsuka/en/rooms/type-c/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/rooms/type-c/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/rooms/type-c/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/rooms/type-c/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-c/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/rooms/type-c/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-c/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/otsuka/en/rooms/type-c/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/rooms/type-c/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/rooms/type-c/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/rooms/type-c/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-c/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/rooms/type-c/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-c/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/otsuka/en/rooms/type-c/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/rooms/type-c/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/rooms/type-c/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/rooms/type-c/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-c/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/otsuka/ko/rooms/type-c/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-c/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/otsuka/en/rooms/type-c/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/rooms/type-c/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/rooms/type-c/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/rooms/type-c/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/rooms/type-c/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Legal -->
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/otsuka/ja/legal/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/legal/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/otsuka/en/legal/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/legal/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/legal/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/legal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/legal/"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/otsuka/en/legal/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/legal/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/otsuka/en/legal/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/legal/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/legal/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/legal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/legal/"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/legal/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/legal/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/otsuka/en/legal/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/legal/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/legal/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/legal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/legal/"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/legal/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/legal/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/otsuka/en/legal/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/legal/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/legal/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/legal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/legal/"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/otsuka/ko/legal/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/legal/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/otsuka/en/legal/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hans/legal/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/otsuka/zh-hant/legal/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/otsuka/ko/legal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/otsuka/ja/legal/"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- ============================================================
+       IKEBUKURO NORTH (上池袋)
+       ============================================================ -->
+
+  <!-- TOP -->
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Rooms: Type 1 -->
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-1/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/rooms/type-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-1/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/rooms/type-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-1/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/rooms/type-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-1/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/rooms/type-1/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/rooms/type-1/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-1/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Rooms: Type 2 -->
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-2/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-2/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/rooms/type-2/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-2/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/rooms/type-2/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-2/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/rooms/type-2/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-2/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/rooms/type-2/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/rooms/type-2/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/rooms/type-2/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Legal -->
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/legal/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/legal/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/legal/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/legal/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/legal/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/legal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/legal/"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/legal/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/legal/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/legal/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/legal/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/legal/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/legal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/legal/"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/legal/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/legal/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/legal/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/legal/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/legal/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/legal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/legal/"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/legal/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/legal/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/legal/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/legal/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/legal/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/legal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/legal/"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/legal/</loc>
+    <lastmod>2026-07-13</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/legal/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/en/legal/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hans/legal/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hant"   href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/zh-hant/legal/"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ko/legal/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.neighbors-hotel-tokyo.com/ikebukuro-north/ja/legal/"/>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>
