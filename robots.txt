@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.neighbors-hotel-tokyo.com/sitemap.xml
