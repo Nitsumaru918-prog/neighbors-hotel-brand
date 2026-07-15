@@ -1,0 +1,209 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg:     #f5efe6;
+  --text:   #3a2510;
+  --accent: #865b39;
+  --en:     'Libre Baskerville', Georgia, serif;
+  --ja:     'Noto Serif JP', 'Yu Mincho', serif;
+}
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--ja);
+  line-height: 1.9;
+}
+.wrap {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: clamp(48px, 8vh, 88px) 24px clamp(40px, 6vh, 64px);
+}
+
+/* ── 言語切替 ─────────────────────────────────── */
+.lang-nav {
+  text-align: center;
+  font-family: var(--ja);
+  font-size: 13px;
+  letter-spacing: .06em;
+  margin-bottom: clamp(32px, 5vh, 52px);
+}
+.lang-nav a {
+  color: var(--text);
+  text-decoration: none;
+  opacity: .55;
+  margin: 0 10px;
+  transition: opacity .3s;
+}
+.lang-nav a:hover { opacity: 1; }
+.lang-nav a[aria-current="true"] {
+  opacity: 1;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 2px;
+}
+
+/* ── ブランドヘッダー ─────────────────────────── */
+.brand-head { text-align: center; }
+.brand-head__logo {
+  width: clamp(180px, 30vw, 260px);
+  height: auto;
+  margin-bottom: clamp(28px, 4vh, 44px);
+}
+.brand-head__copy {
+  font-family: var(--ja);
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: 400;
+  letter-spacing: .14em;
+  line-height: 1.7;
+  margin-bottom: clamp(28px, 4vh, 40px);
+}
+.brand-head__lead {
+  font-size: clamp(15.5px, 1.8vw, 18px);
+  letter-spacing: .06em;
+  text-align: left;
+  max-width: 620px;
+  margin: 0 auto;
+}
+.brand-head__lead p + p { margin-top: 1.4em; }
+.brand-head__lead .lead-close {
+  text-align: center;
+  margin-top: 2em;
+  letter-spacing: .1em;
+}
+
+/* ── 区切り ─────────────────────────────────── */
+.divider {
+  width: 48px;
+  height: 1px;
+  background: var(--accent);
+  opacity: .5;
+  margin: clamp(48px, 7vh, 72px) auto;
+}
+
+/* ── ホテル一覧 ─────────────────────────────── */
+.hotels-title {
+  font-family: var(--en);
+  font-size: clamp(18px, 2.2vw, 21.5px);
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--accent);
+  margin-bottom: clamp(36px, 5vh, 56px);
+}
+.hotel-card {
+  display: flex;
+  align-items: stretch;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid rgba(134, 91, 57, .25);
+  background: rgba(255, 255, 255, .35);
+  transition: box-shadow .3s, border-color .3s;
+}
+.hotel-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 24px rgba(58, 37, 16, .10);
+}
+.hotel-card + .hotel-card { margin-top: clamp(28px, 4vh, 44px); }
+.hotel-card__img {
+  flex: 0 0 42%;
+  width: 42%;
+  min-height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.hotel-card__body {
+  flex: 1 1 auto;
+  padding: clamp(20px, 3vw, 32px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.hotel-card__name {
+  font-family: var(--en);
+  font-size: clamp(18px, 2.4vw, 23px);
+  letter-spacing: .18em;
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+.hotel-card__name-ja {
+  font-family: var(--ja);
+  font-size: clamp(13px, 1.4vw, 15px);
+  letter-spacing: .12em;
+  opacity: .65;
+  margin-bottom: 14px;
+}
+.hotel-card__copy {
+  font-size: clamp(16px, 1.9vw, 18.5px);
+  letter-spacing: .08em;
+  line-height: 1.9;
+  margin-bottom: 14px;
+}
+.hotel-card__info {
+  display: flex;
+  gap: 18px;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.hotel-card__addr {
+  flex: 1 1 220px;
+  font-size: clamp(14px, 1.4vw, 15.5px);
+  letter-spacing: .05em;
+  opacity: .8;
+  line-height: 1.9;
+}
+.hotel-card__addr dt {
+  font-size: 12.5px;
+  letter-spacing: .2em;
+  color: var(--accent);
+  font-family: var(--en);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+.hotel-card__addr dd + dt { margin-top: 8px; }
+.hotel-card__map {
+  flex: 0 1 240px;
+  min-width: 180px;
+}
+.hotel-card__map iframe {
+  width: 100%;
+  height: 140px;
+  border: 1px solid rgba(134, 91, 57, .2);
+  display: block;
+}
+.hotel-card__cta {
+  display: inline-block;
+  align-self: flex-start;
+  margin-top: 18px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-family: var(--en);
+  font-size: 14.5px;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  padding: 12px 32px;
+  transition: background .3s, color .3s;
+}
+.hotel-card:hover .hotel-card__cta {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+footer {
+  text-align: center;
+  font-family: var(--en);
+  font-size: 13px;
+  letter-spacing: .1em;
+  opacity: .4;
+  padding-bottom: 32px;
+}
+
+@media (max-width: 768px) {
+  .hotel-card { flex-direction: column; }
+  .hotel-card__img {
+    flex: none;
+    width: 100%;
+    aspect-ratio: 5 / 2.8;
+    min-height: 0;
+  }
+  .hotel-card__info { flex-direction: column; gap: 14px; }
+  .hotel-card__map { flex: none; width: 100%; }
+}
