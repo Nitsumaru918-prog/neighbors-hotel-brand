@@ -1,6 +1,18 @@
 ﻿<!DOCTYPE html>
 <html lang="zh-Hans">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GB7FN4XXNM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GB7FN4XXNM', { content_group: 'otsuka' });
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest ? e.target.closest('a[href*="tripla_booking_widget_open"]') : null;
+      if (a) { gtag('event', 'booking_widget_open', { link_url: a.href }); }
+    });
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Type B | NEIGHBORS HOTEL TOKYO OTSUKA</title>
